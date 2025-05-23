@@ -1,9 +1,5 @@
 # What's for Dinner
 
-![Build Status](https://img.shields.io/github/workflow/status/your-username/whats-for-dinner-app/CI)
-![License](https://img.shields.io/github/license/your-username/whats-for-dinner-app)
-![Version](https://img.shields.io/github/package-json/v/your-username/whats-for-dinner-app)
-
 ## Table of Contents
 
 - [Introduction](#introduction)

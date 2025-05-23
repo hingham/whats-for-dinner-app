@@ -1,0 +1,419 @@
+[
+  {
+    "ingredients": [
+      {
+        "item": "3 pounds boneless skinless chicken breasts",
+        "amountUS": 2,
+        "measurementUS": "to",
+        "optional": false
+      },
+      {
+        "item": "chicken stock (or water)",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "kosher salt",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "freshly-cracked black pepper",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Combine the ingredients.  Add the chicken breasts, salt and pepper, and chicken stock to the bowl of your pressure cooker.  Give everything a brief toss to combine, then arrange the chicken breasts so that they are spread out in an even layer."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Pressure cook:  Cover and set the pressure cooker lid valve to “sealing.”  Pressure cook on high for 10 minutes, followed by a 5 minute natural release, followed by a quick release (carefully flip the valve to “venting”) to release whatever pressure remains."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Shred:  Remove the lid and use two forks to shred the chicken.  Give it a thorough toss with the remaining juices in the pressure cooker."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Serve or store:  Serve the chicken while it’s nice and warm.  Or transfer it between two zip lock bags. Ensure there are some \"juices\" which will help protect the chicken in the freezer. Squeeze the air out of the bag. Label and place in freezer for up to 3 months."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Simple Shredded Crockpot Chicken",
+    "link": "",
+    "freezer": true,
+    "id": "frozenBase#7aa86255-4095-47a6-a2a0-fa1475031eea",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "extra-firm tofu",
+        "amountUS": 14,
+        "measurementUS": "ounce",
+        "optional": false
+      },
+      {
+        "item": "soy sauce (or tamari)",
+        "amountUS": 1,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "cornstarch",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "olive oil",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Press the tofu: Press the tofu by wrapping it in paper towels (or a clean dry tea towel). Place a plate or pan on top of the wrapped tofu, and put a couple of heavy books or cast iron pan on top of that. Let the tofu press for 30 minutes to an hour. I like to press a few blocks at a time on the weekend, then keep in the refrigerator for quick weeknight meals."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cut the pressed tofu into 1 inch cubes and add to a large bowl. Drizzle the soy sauce on top and stir gently with a silicone spatula or small spoon. Be careful not to rip the tofu."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Optionally let the tofu marinate for up to 4 hours."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Sprinkle on the cornstarch and gently stir to coat the tofu."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cook on stove top: To cook on the stove top, heat a large non-stick pan over medium-high heat. Add the olive oil so it coats the pan. Once the oil is hot, add the tofu in a single layer (you might need to do this in batches, depending on how big your pan is). Let the tofu brown on all sides, it should be a nice golden color all over. Transfer to a plate nearby."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cook in the oven: Preheat oven to 400 degrees. Spread out tofu on a baking sheet and bake for 25-30 minutes until crispy."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Serve warm or let cool and portion out into bags to freeze."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Reheat in oven or frying pan with a bit of oil."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Simple Crispy Tofu",
+    "link": "",
+    "freezer": true,
+    "id": "frozenBase#490ebff6-d065-49c0-a865-4c170af1d0ba",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://cookieandkate.com/how-to-make-crispy-baked-tofu/#tasty-recipes-24123-jump-target",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "chicken breasts sliced in half lengthways; or use 4 small breasts",
+        "amountUS": 2,
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "olive oil divided",
+        "amountUS": 3,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "garlic powder",
+        "amountUS": 0.75,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "smoked paprika",
+        "amountUS": 0.75,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "onion powder",
+        "amountUS": 0.75,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "oregano",
+        "amountUS": 0.75,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "salt",
+        "amountUS": 0.75,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "amountUS": 0.25,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "cayenne",
+        "amountUS": 0.25,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "butter",
+        "amountUS": 2,
+        "measurementUS": "tablespoon",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "If your chicken breasts are larger, slice them in half to create 4 thinner chicken breasts, then pat them dry with a paper towel. Brush 1 tablespoon of olive oil over the chicken."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a small bowl, stir all of the seasonings together. Use your hands to sprinkle and rub the spice mixture over the chicken, coating all sides."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Pour the remaining olive oil in a large, deep skillet or a cast iron skillet and heat it over medium-high heat. Once hot, add the chicken smooth side down and cook the chicken for 5 minutes. Use tongs to flip the chicken over, then reduce the heat to medium and cook the chicken for an additional 2-5 minutes. Use a meat thermometer to confirm the internal temperature is at least 165 before removing from heat."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the butter to the skillet and let melt, then remove the skillet from the heat."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "To serve: Let the chicken rest on a cutting board for 5 minutes before slicing."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "To freeze: Flip the chicken to ensure it has a thin coat of butter. This will help protect it in the freezer. Let it cool for 10 - 15 minutes. Then put in fridge to cool further. Place individual portions (about 1 lb) into plastic bags. Squeeze out air and put in freezer."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Grilled Chicken",
+    "link": "",
+    "freezer": true,
+    "id": "frozenBase#1e082e02-24c9-45e7-ba54-44d81f276484",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://thealmondeater.com/pan-seared-chicken-breast/#recipe",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "oil",
+        "amountUS": 2,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "dried onion",
+        "amountUS": 1,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "dried minced garlic (or 2 cloves)",
+        "amountUS": 0.25,
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "leaf",
+        "amountUS": 1,
+        "measurementUS": "bay",
+        "optional": false
+      },
+      {
+        "item": "taco seasoning",
+        "amountUS": 2,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "black beans",
+        "amountUS": 1,
+        "measurementUS": "lb",
+        "optional": false
+      },
+      {
+        "item": "water",
+        "amountUS": 5,
+        "measurementUS": "cups",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add beans to a pot. Cover with water. Bring to a roaring boil and turn heat off. Let sit for 1 hour."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Drain beans. Leave beans in the strainer."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add oil to empty pot. Add the onions and garlic to the pot, and saute for about 3 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the bay leaf and spices."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the black beans and water, stirring to deglaze and incorporate the flavorful veggie bits from the bottom of the pot into the beans."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Bring water to a simmer. Cover pot and let simmer for 60 - 90 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "When beans are soft and cooked, turn off heat."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add lime juice. Let cool. "
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Portion out into zip lock bags for freezing. Make sure in add some liquid in each bag to protect beans and add flavor."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Mexican Black Beans",
+    "link": "",
+    "freezer": true,
+    "id": "frozenBase#582bdeb0-b17b-4576-8984-a6601152cbdb",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "",
+    "image": ""
+  }
+]

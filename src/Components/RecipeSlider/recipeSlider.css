@@ -1,0 +1,10 @@
+.slick-slide > div {
+    margin: 1em;
+}
+
+.slick-prev:before,
+.slick-next:before,
+.slick-next::after,
+.slick-prev:after {
+    color: var(--neutral-dark-gray);
+}

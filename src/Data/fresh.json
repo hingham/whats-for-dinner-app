@@ -1,0 +1,614 @@
+[
+  {
+    "ingredients": [
+      {
+        "item": "fresh orange juice (or juice of orange)",
+        "amountUS": 0.33,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "soy sauce",
+        "amountUS": 1,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "rice vinegar",
+        "amountUS": 0.25,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "chili garlic sauce (optional)",
+        "amountUS": 1.5,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "cornstarch",
+        "amountUS": 0.5,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "orange zest",
+        "amountUS": 2,
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "garlic cloves, minced",
+        "amountUS": 3,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "ginger, minced",
+        "amountUS": 1,
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "red chili flakes",
+        "amountUS": 0.5,
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "brown sugar (optional)",
+        "amountUS": 1,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "Salt to taste",
+        "amountUS": null,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "oil",
+        "amountUS": 1,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": " sesame seeds",
+        "amountUS": 1,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "green onions chopped",
+        "amountUS": 2,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "cooked rice, to serve",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "steamed broccoli, to serve",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "{base}",
+        "amountUS": 1.5,
+        "measurementUS": "cup",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a bowl combine orange juice, soy sauce, vinegar, chili garlic sauce, cornstarch, orange zest, garlic, ginger, red chili flakes, brown sugar, and salt. Whisk it until the sugar dissolves and keep the sauce mixture aside."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Heat a wide skillet; add oil and once the oil is heated add the thawed {base} pieces to it. Cook for 4-5 minutes until heated."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Stir in the prepared sauce mixture to the skillet and cook uncovered for 5 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "The sauce will start to thicken and everything comes together. In this stage add the sesame seeds and green onions."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Plate the orange {base} over rice in a bowl. If adding greens, quickly saute in the same pan to mop up remaining sauce and place along side tofu. "
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Healthy Orange Tofu",
+    "link": "",
+    "freezer": true,
+    "id": "freshRecipes#462684cc-2380-4192-911b-291b4d3d721b",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://gimmedelicious.com/wprm_print/healthy-orange-chicken",
+    "image": "",
+    "base": "490ebff6-d065-49c0-a865-4c170af1d0ba"
+  },
+  {
+    "ingredients": [
+      {
+        "item": "smooth peanut butter",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "full fat coconut milk",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "low sodium soy sauce (tamari for gluten free)",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "maple syrup",
+        "amountUS": 1,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "fresh grated ginger",
+        "amountUS": 2,
+        "measurementUS": "teaspoons",
+        "optional": false
+      },
+      {
+        "item": "garlic cloves, minced",
+        "amountUS": 2,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "fresh lime juice (about lime)",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "handfuls of greens like kale, spinach, or swiss chard (optional)",
+        "amountUS": 3,
+        "measurementUS": null,
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a large pan, add all the sauce ingredients and turn the heat to medium. Stir constantly, until smooth and creamy, about 3-4s minutes. "
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add {base} to the pan with the sauce, and stir to coat. Serve immediately over {rice}, or {coconut rice}. Sprinkle peanuts and cilantro on top, if desired."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add quick {sauteed greens} if desired, sauteing them in the same pan to soak up peanut sauce flavors."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Peanut Sauce Tofu With Coconut Rice",
+    "link": "",
+    "freezer": true,
+    "id": "freshRecipes#fa488e05-3df7-49e9-b1f7-c4374f110663",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://www.noracooks.com/peanut-buddha-bowl/#wprm-recipe-container-2431",
+    "image": "",
+    "base": "490ebff6-d065-49c0-a865-4c170af1d0ba"
+  },
+  {
+    "ingredients": [
+      {
+        "item": "peanut butter",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "low sodium soy sauce",
+        "amountUS": 0.33,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "sesame oil (toasted or dark)",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "rice vinegar",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "sambal oelek or chili paste (this is where the “spicy” comes in, so add to taste)",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "small knob of fresh ginger, peeled",
+        "amountUS": null,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "clove of fresh garlic, peeled",
+        "amountUS": null,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "of water",
+        "amountUS": 0.25,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "cooked white rice*",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "quick picked carrot",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "medium ripe avocado, sliced",
+        "amountUS": 1,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "chopped scallions (optional)",
+        "amountUS": 3,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "red cabbage, thinly sliced (optional)",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "edamame beans, blanched (optional)",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "radishes, thinly sliced (optional)",
+        "amountUS": 4,
+        "measurementUS": null,
+        "optional": true
+      },
+      {
+        "item": "Black and white sesame seeds, for topping (optional)",
+        "amountUS": null,
+        "measurementUS": null,
+        "optional": true
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cook {rice}."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Bake or fry {base} for about 5 minutes to warm through if desired."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Peanut sauce: In a small bowl, add peanut butter, soy sauce, sesame oil, rice vinegar, chili paste, ginger, and garlic. Using a whisk or a fork, mix until smooth and creamy. Taste and adjust the flavor if needed, adding more soy sauce or sriracha to taste. If you want to add some sweetness, you can add a drizzle of maple syrup as well."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Assemble: Add your cooked rice at bottom of a large bowl and top with {base}, toppings, avocado, and a generous drizzle of peanut sauce. Enjoy your Buddha bowl right away!"
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Tofu Buddha Bowl with Peanut Sauce",
+    "link": "",
+    "freezer": true,
+    "id": "freshRecipes#9b1664e9-dd88-4068-b6f2-880ce123ef74",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "",
+    "image": "",
+    "base": "490ebff6-d065-49c0-a865-4c170af1d0ba"
+  },
+  {
+    "ingredients": [
+      {
+        "item": "chopped romaine or leaf lettuce",
+        "amountUS": 2,
+        "measurementUS": "cups",
+        "optional": false
+      },
+      {
+        "item": "slices of bacon, cooked and crumbled (optional)",
+        "amountUS": 2,
+        "measurementUS": null,
+        "optional": true
+      },
+      {
+        "item": "ear fresh corn, kernels removed (optional)",
+        "amountUS": 1,
+        "measurementUS": null,
+        "optional": true
+      },
+      {
+        "item": "halved cherry or grape tomatoes (optional)",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "avocado, peeled and cubed",
+        "amountUS": 1,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "pickled red onions",
+        "amountUS": 2,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "hard-boiled eggs",
+        "amountUS": 2,
+        "measurementUS": null,
+        "optional": false
+      },
+      {
+        "item": "blue cheese crumbles or shredded cheddar cheese",
+        "amountUS": 1,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "black olives (optional)",
+        "amountUS": 6,
+        "measurementUS": "oz",
+        "optional": true
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Slice {base} into 1/4 inch slices. Warm the {base} if desired by adding it to a frying pan at medium heat with a touch of oil and stirring for 2-3 minutes. "
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a large bowl, add the chopped leaf lettuce as the base."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Arrange the {base}, bacon, corn kernels, tomatoes, avocado, pickled red onions, cheese, and olives over the lettuce. You can layer them in sections for a classic Cobb Salad presentation or toss everything together for a more rustic look."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Drizzle the {ranch dressing} over the top of the salad. Toss gently to coat all the ingredients evenly or leave tossing to the diner!"
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Cobb Salad",
+    "link": "",
+    "freezer": true,
+    "id": "freshRecipes#bbdf5821-23bb-457d-ad69-2d2dce480615",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "",
+    "image": "",
+    "base": "1e082e02-24c9-45e7-ba54-44d81f276484"
+  },
+  {
+    "ingredients": [
+      {
+        "item": "rice",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "black beans",
+        "amountUS": 1,
+        "measurementUS": "cups",
+        "optional": false
+      },
+      {
+        "item": "cilantro (optional)",
+        "amountUS": 0.33,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "sour cream (optional)",
+        "amountUS": 0.33,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "shredded cheddar cheese (optional)",
+        "amountUS": 0.33,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "salsa (optional)",
+        "amountUS": 0.5,
+        "measurementUS": "cup",
+        "optional": true
+      },
+      {
+        "item": "avocado (optional)",
+        "amountUS": 0.5,
+        "measurementUS": null,
+        "optional": true
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Make {rice}"
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Warm black beans in a pot"
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Mix rice and black beans"
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Top with toppings of choice"
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Easy Black Bean Burrito Bowl",
+    "link": "",
+    "freezer": true,
+    "id": "freshRecipes#d8fdaf7f-b430-4afe-89b3-aaee7e6fa6e0",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "",
+    "image": "fresh-frozen-base/burrito-bowls-vegan-cashew-sauce",
+    "base": "582bdeb0-b17b-4576-8984-a6601152cbdb"
+  }
+]

@@ -1,0 +1,7 @@
+button.textButton:hover {
+    background-color: transparent;
+}
+
+button.textButton {
+    text-decoration: underline;
+}

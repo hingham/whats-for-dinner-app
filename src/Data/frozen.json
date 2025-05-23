@@ -1,0 +1,1511 @@
+[
+  {
+    "ingredients": [
+      {
+        "item": "extra-virgin olive oil",
+        "amountUS": "2",
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "red onion, chopped",
+        "amountUS": "1",
+        "measurementUS": "medium",
+        "optional": false
+      },
+      {
+        "item": "red bell pepper, chopped",
+        "amountUS": "1",
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "carrots, chopped",
+        "amountUS": "2",
+        "measurementUS": "medium",
+        "optional": false
+      },
+      {
+        "item": "celery, chopped",
+        "amountUS": "2",
+        "measurementUS": "ribs",
+        "optional": false
+      },
+      {
+        "item": "salt, divided",
+        "amountUS": "½",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "garlic, pressed or minced",
+        "amountUS": "4",
+        "measurementUS": "cloves",
+        "optional": false
+      },
+      {
+        "item": "chili powder*",
+        "amountUS": "2",
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "ground cumin",
+        "amountUS": "2",
+        "measurementUS": "teaspoons",
+        "optional": false
+      },
+      {
+        "item": "teaspoons smoked paprika*",
+        "amountUS": "1",
+        "measurementUS": "½",
+        "optional": false
+      },
+      {
+        "item": "dried oregano",
+        "amountUS": "1",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "can (28 ounces) or 2 small cans (15 ounces each) diced tomatoes**, with their juices",
+        "amountUS": "1",
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "(15 ounces each) black beans, rinsed and drained",
+        "amountUS": "2",
+        "measurementUS": "cans",
+        "optional": false
+      },
+      {
+        "item": "(15 ounces) pinto beans, rinsed and drained",
+        "amountUS": "1",
+        "measurementUS": "can",
+        "optional": false
+      },
+      {
+        "item": "vegetable broth or water",
+        "amountUS": "2",
+        "measurementUS": "cups",
+        "optional": false
+      },
+      {
+        "item": "leaf",
+        "amountUS": "1",
+        "measurementUS": "bay",
+        "optional": false
+      },
+      {
+        "item": "chopped fresh cilantro, plus more for garnishing",
+        "amountUS": "2",
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "2 teaspoons sherry vinegar or red wine vinegar or lime juice, to taste",
+        "amountUS": "1",
+        "measurementUS": "to",
+        "optional": false
+      },
+      {
+        "item": "cilantro, sliced avocado, tortilla chips, sour cream or crème fraîche, grated cheddar cheese, etc.",
+        "amountUS": "Garnishes:",
+        "measurementUS": "chopped",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "stove",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a large Dutch oven or heavy-bottomed pot over medium heat, warm the olive oil until shimmering. Add the chopped onion, bell pepper, carrot, celery and ¼ teaspoon of the salt. Stir to combine and cook, stirring occasionally, until the vegetables are tender and the onion is translucent, about 7 to 10 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the garlic, chili powder, cumin, smoked paprika and oregano. Cook until fragrant while stirring constantly, about 1 minute."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the diced tomatoes and their juices, the drained black beans and pinto beans, vegetable broth and bay leaf. Stir to combine and let the mixture come to a simmer. Continue cooking, stirring occasionally and reducing heat as necessary to maintain a gentle simmer, for 30 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Remove the chili from the heat and discard the bay leaf. For the best texture and flavor, transfer 1 ½ cups of the chili to a blender, making sure to get some of the liquid portion. Securely fasten the lid and blend until smooth (watch out for hot steam), then pour the blended mixture back into the pot. (Or, you can blend the chili briefly with an immersion blender, or mash the chili with a potato masher until it reaches a thicker, more chili-like consistency.)"
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the chopped cilantro, stir to combine, and then mix in the vinegar, to taste. Add salt to taste, too—I added ¼ teaspoon more at this point. Divide the mixture into individual bowls and serve with garnishes of your choice. This chili will keep well in the refrigerator for about 4 days or you can freeze it for longer-term storage."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Chili",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#63747371-2e40-4be4-a7e2-2790fd5d3e22",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "ground beef or lamb",
+        "amountUS": "1",
+        "measurementUS": "pound",
+        "optional": false
+      },
+      {
+        "item": "carrots, peeled and diced",
+        "amountUS": "2",
+        "measurementUS": "medium",
+        "optional": false
+      },
+      {
+        "item": "green pepper, diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "yellow onion, diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "mushrooms, cleaned and stemmed, diced",
+        "amountUS": "1",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "garlic, minced",
+        "amountUS": "4",
+        "measurementUS": "cloves",
+        "optional": false
+      },
+      {
+        "item": "tomato paste",
+        "amountUS": "3",
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "chili powder",
+        "amountUS": "1",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "dried rosemary or dried herb of choice",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "fine salt or to taste",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "amountUS": "1/4",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "water",
+        "amountUS": "1/4",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "sweet potatoes (about 12 ounces each), peeled and cubed (~6 cups cubed) (topping)",
+        "amountUS": "2",
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "butter (may substitute ghee or coconut oil for Whole30) (topping)",
+        "amountUS": "1",
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "chili powder (topping)",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "fine salt (topping)",
+        "amountUS": "1/4",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": "",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "stove",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a large Dutch oven or heavy-bottomed pot over medium heat, warm the olive oil until shimmering. Add the chopped onion, bell pepper, carrot, celery and ¼ teaspoon of the salt. Stir to combine and cook, stirring occasionally, until the vegetables are tender and the onion is translucent, about 7 to 10 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the garlic, chili powder, cumin, smoked paprika and oregano. Cook until fragrant while stirring constantly, about 1 minute."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the diced tomatoes and their juices, the drained black beans and pinto beans, vegetable broth and bay leaf. Stir to combine and let the mixture come to a simmer. Continue cooking, stirring occasionally and reducing heat as necessary to maintain a gentle simmer, for 30 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Remove the chili from the heat and discard the bay leaf. For the best texture and flavor, transfer 1 ½ cups of the chili to a blender, making sure to get some of the liquid portion. Securely fasten the lid and blend until smooth (watch out for hot steam), then pour the blended mixture back into the pot. (Or, you can blend the chili briefly with an immersion blender, or mash the chili with a potato masher until it reaches a thicker, more chili-like consistency.)"
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the chopped cilantro, stir to combine, and then mix in the vinegar, to taste. Add salt to taste, too—I added ¼ teaspoon more at this point. Divide the mixture into individual bowls and serve with garnishes of your choice. This chili will keep well in the refrigerator for about 4 days or you can freeze it for longer-term storage."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Sweet Potato Shepard's Pie",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#2e6fdaa3-b731-4b1e-b638-38bad55e8e6a",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://therealfooddietitians.com/shepherds-pie/",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "ground beef or lamb",
+        "amountUS": "1",
+        "measurementUS": "pound",
+        "optional": false
+      },
+      {
+        "item": "carrots, peeled and diced",
+        "amountUS": "2",
+        "measurementUS": "medium",
+        "optional": false
+      },
+      {
+        "item": "green pepper, diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "yellow onion, diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "mushrooms, cleaned and stemmed, diced",
+        "amountUS": "1",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "garlic, minced",
+        "amountUS": "4",
+        "measurementUS": "cloves",
+        "optional": false
+      },
+      {
+        "item": "tomato paste",
+        "amountUS": "3",
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "chili powder",
+        "amountUS": "1",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "dried rosemary or dried herb of choice",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "fine salt or to taste",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "amountUS": "1/4",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "water",
+        "amountUS": "1/4",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "sweet potatoes (about 12 ounces each), peeled and cubed (~6 cups cubed) (topping)",
+        "amountUS": "2",
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "butter (may substitute ghee or coconut oil for Whole30) (topping)",
+        "amountUS": "1",
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "chili powder (topping)",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "fine salt (topping)",
+        "amountUS": "1/4",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": "",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "stove",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Preheat the oven to 425 degrees F. Lightly coat a 9-inch pie dish with baking spray. Set aside."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Heat a large Dutch oven or similar deep, heavy-bottomed pan over medium-high heat. Add the oil to the pan. Once hot, add the mushrooms and cook for 8 minutes, until mushrooms are beginning to brown, stirring occasionally. Add the carrots, celery, garlic powder,  salt, and pepper. Cook until the mushrooms have browned more deeply and the carrots begin to soften, about 3 additional minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Sprinkle the flour over the top of the vegetables and cook 2 minutes. Slowly pour in the almond milk, adding a few splashes at a time, stirring constantly. Bring to a low boil, scraping any brown bits from the bottom of the pan. Continue to let bubble until thickened, about 3 to 5 minutes. Stir in the chicken, peas, onions, and thyme. Spoon the chicken mixture into the prepared pie dish."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Roll the pie dough into a circle large enough to cover your dish. Brush the edges of the pie dish with the egg wash, then lay the dough over the top so that it overhangs the sides. Trim the overhang to a 1/2 inch larger than edge of the dish. Gently press the dough onto the sides of the dish so that it sticks, then brush all over with the remaining egg wash. With a sharp knife, cut 3 slits in the top."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Bake until hot and bubbly on the inside and the crust is deeply golden, about 25 minutes. Let rest a few minutes. Serve hot."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Healthy Chicken Pot Pie",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#54accd4d-dc8b-4fc2-82ad-1a9fea893df9",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://www.wellplated.com/wprm_print/healthy-chicken-pot-pie",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "ground beef or lamb",
+        "amountUS": "1",
+        "measurementUS": "pound",
+        "optional": false
+      },
+      {
+        "item": "carrots, peeled and diced",
+        "amountUS": "2",
+        "measurementUS": "medium",
+        "optional": false
+      },
+      {
+        "item": "green pepper, diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "yellow onion, diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "mushrooms, cleaned and stemmed, diced",
+        "amountUS": "1",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "garlic, minced",
+        "amountUS": "4",
+        "measurementUS": "cloves",
+        "optional": false
+      },
+      {
+        "item": "tomato paste",
+        "amountUS": "3",
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "chili powder",
+        "amountUS": "1",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "dried rosemary or dried herb of choice",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "fine salt or to taste",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "amountUS": "1/4",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "water",
+        "amountUS": "1/4",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "sweet potatoes (about 12 ounces each), peeled and cubed (~6 cups cubed) (topping)",
+        "amountUS": "2",
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "butter (may substitute ghee or coconut oil for Whole30) (topping)",
+        "amountUS": "1",
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "chili powder (topping)",
+        "amountUS": "1/2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "fine salt (topping)",
+        "amountUS": "1/4",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": "",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "stove",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Preheat oven to 350°F and spray a large 9x13 inch casserole dish with cooking spray. Set aside."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Heat olive oil in a deep saute pan over medium heat. Sprinkle both sides of chicken breast with cumin, garlic powder, salt and pepper. Add to the pan with olive oil and cook chicken over medium heat for 6-7 minutes on each side, or until it reaches an internal temperature of 165°F. Remove chicken to a cutting board to cool. Note 1 for other cooking methods."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "To the pan, add the diced onion and garlic and cook, stirring frequently, until onions are translucent and garlic is fragrant. Add the black beans and diced green chilis to the onion and garlic and stir until combined. Reduce heat to low and allow to cook slightly while shredding the chicken."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Use two forks to shred each chicken breast then place in the pan with the black beans mixture. Stir to combine. Remove from heat."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Prepare the tortillas by heating them in the microwave for 30 seconds. This softens them and makes them more pliable to work with and roll. Dip each tortilla in a shallow bowl with 1/2 cup enchilada sauce then spoon 1/4 cup chicken and black bean mixture into the tortilla. Fold tortilla over filling and roll up. Place seam down at the end of the prepared baking dish. Repeat the process until all tortillas and filling are used and pan is full of enchiladas."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Top prepared enchiladas with the rest of the sauce and top with shredded cheese if using. Bake in preheated oven for 15 minutes or until sauce is bubbling and cheese is melted. Top with garnishes before serving."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "cover the enchiladas before baking with plastic wrap and foil and freeze for up to 3 months. Bake from frozen until hot and bubbly. You could also freeze baked enchiladas once they're cooled."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Healthy Chicken Enchiladas",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#9d866d9b-d9d8-4a6c-964d-6d8a6722cb39",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://whatmollymade.com/wprm_print/healthy-chicken-enchiladas/",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "salted butter",
+        "amountUS": "4",
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "sprigs of thyme",
+        "amountUS": "a",
+        "measurementUS": "few",
+        "optional": false
+      },
+      {
+        "item": "shallots minced ",
+        "amountUS": "1/2",
+        "measurementUS": "cups",
+        "optional": false
+      },
+      {
+        "item": "garlic, minced",
+        "amountUS": "4",
+        "measurementUS": "cloves",
+        "optional": false
+      },
+      {
+        "item": "carrots peeled and sliced thinly",
+        "amountUS": "2 1/2",
+        "measurementUS": "cups,",
+        "optional": false
+      },
+      {
+        "item": "stalks, chopped (about 1 cup)",
+        "amountUS": "4",
+        "measurementUS": "celery",
+        "optional": false
+      },
+      {
+        "item": "coarse kosher salt, divided",
+        "amountUS": "2",
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "flour",
+        "amountUS": "1/3",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "dry white wine (about 1/2 cup, sub chicken broth)",
+        "amountUS": "splash",
+        "measurementUS": "of",
+        "optional": false
+      },
+      {
+        "item": "chicken broth",
+        "amountUS": "2",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "cup whole milk",
+        "amountUS": "2",
+        "measurementUS": "1/4",
+        "optional": false
+      },
+      {
+        "item": "shredded chicken (I use a rotisserie chicken)",
+        "amountUS": "4",
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "bag of frozen peas (sub garbanzo beans or zucchini)",
+        "amountUS": "1",
+        "measurementUS": "10-ounce",
+        "optional": false
+      },
+      {
+        "item": "of lemon juice",
+        "amountUS": "tiny",
+        "measurementUS": "squeeze",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": "",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "stove",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Preheat the oven to 425 degrees. "
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Melt the butter in a large oven-safe Dutch oven or pan. Add the shallots, garlic, and thyme; sauté for 5 minutes. Add the carrots, celery, and 1 teaspoon of salt; sauté for 5 minutes. Add the flour; let it cook for 1-2 minutes. Add wine; let it sizzle out. The mixture will be sticky and thick. Don’t panic. You’re doing it right. Slowly and gradually, add the chicken broth, milk, and cream. Stir and let it rest a bit after each addition. After a few minutes the mixture should resemble a thick, creamy soup. Add chicken and peas (or substitute). Season to taste with remaining salt, pepper, and just a tiny bit of lemon juice. Remove sprigs of thyme."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Arrange biscuits on top of filling. Brush biscuits with milk or butter for extra browning. Bake for 15-20 minutes, until hot, bubbly, and biscuits are cooked through. Let rest for 10 minutes before serving and season with salt and pepper to taste! YUM."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Chicken Pot Pie With Biscuits",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#16324aa3-b74c-4f0e-8988-754edd4e2e6b",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://pinchofyum.com/chicken-pot-pie-with-biscuits",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "yellow onion , diced",
+        "amountUS": "1",
+        "measurementUS": "small",
+        "optional": false
+      },
+      {
+        "item": "olive oil",
+        "amountUS": "1",
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "garlic , finely minced",
+        "amountUS": "2",
+        "measurementUS": "cloves",
+        "optional": false
+      },
+      {
+        "item": "carrots , peeled and chopped",
+        "amountUS": "3",
+        "measurementUS": "whole",
+        "optional": false
+      },
+      {
+        "item": "oz) cans low-sodium chicken broth",
+        "amountUS": "2",
+        "measurementUS": "(14.5",
+        "optional": false
+      },
+      {
+        "item": "oz) can diced green chilies",
+        "amountUS": "1",
+        "measurementUS": "(7",
+        "optional": false
+      },
+      {
+        "item": "tsp cumin",
+        "amountUS": "1",
+        "measurementUS": "1/2",
+        "optional": false
+      },
+      {
+        "item": "paprika",
+        "amountUS": "1/2",
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "dried oregano",
+        "amountUS": "1/2",
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "ground coriander",
+        "amountUS": "1/2",
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "cayenne pepper",
+        "amountUS": "1/4",
+        "measurementUS": "tsp",
+        "optional": false
+      },
+      {
+        "item": "freshly ground black pepper , to taste",
+        "amountUS": "salt",
+        "measurementUS": "and",
+        "optional": false
+      },
+      {
+        "item": "oz) pkg Neufchatel cheese (aka light cream cheese), cut into small cubes",
+        "amountUS": "1",
+        "measurementUS": "(8",
+        "optional": false
+      },
+      {
+        "item": "cup frozen or fresh corn",
+        "amountUS": "1",
+        "measurementUS": "1/4",
+        "optional": false
+      },
+      {
+        "item": "15 oz cans cannellini beans",
+        "amountUS": "2",
+        "measurementUS": "can",
+        "optional": false
+      },
+      {
+        "item": "cups shredded cooked chicken",
+        "amountUS": "2",
+        "measurementUS": "1/2",
+        "optional": false
+      },
+      {
+        "item": "fresh lime juice",
+        "amountUS": "1",
+        "measurementUS": "Tbsp",
+        "optional": false
+      },
+      {
+        "item": "masa harina",
+        "amountUS": "2",
+        "measurementUS": "Tbsp",
+        "optional": false
+      },
+      {
+        "item": "chopped fresh cilantro, plus more for serving",
+        "amountUS": "2",
+        "measurementUS": "Tbsp",
+        "optional": false
+      },
+      {
+        "item": "Tortilla chips or strips, monterrey jack cheese, sliced avocado, or green onion for serving (optional)",
+        "amountUS": "",
+        "measurementUS": "",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": "",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "stove",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Saute onions first. Then add garlic and carrots."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add broth, spices, and chilies."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cook on high 3 hours or low 5 - 6 hours (or until chicken is cooked through)"
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Make pureed bean mixture with one cup beans, softened light cream cheese (or cottage cheese), and a bit of broth."
+          },
+          {
+            "preNote": "Mixing masa harina with small amount of broth reduces clumping",
+            "postNote": "",
+            "step": "Measure out one cup of broth and mix in the masa harina to combine. Add back into broth."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Stir in pureed bean mixture, remaining beans, corn, shredded chicken, lime and cilantro. Heat through. (reserve corn if planning to freeze batch as refreezing twice can effect taste)"
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "White Bean Chicken Chili",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#9dd880ae-ae23-4430-b01d-234430456c71",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://www.cookingclassy.com/white-chicken-chili/",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "dry pasta I used Toscani-shaped pasta",
+        "amountUS": 8,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": null,
+        "measurementUS": "salt",
+        "optional": false
+      },
+      {
+        "item": "extra virgin olive",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "butter",
+        "amountUS": 1,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "minced",
+        "amountUS": 2,
+        "measurementUS": "shallots",
+        "optional": false
+      },
+      {
+        "item": "cloves minced",
+        "amountUS": 5,
+        "measurementUS": "garlic",
+        "optional": false
+      },
+      {
+        "item": "Baby Bella Mushrooms sliced",
+        "amountUS": 8,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "white mushrooms sliced",
+        "amountUS": 8,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "portabella mushrooms roughly chopped",
+        "amountUS": 8,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "",
+        "amountUS": null,
+        "measurementUS": "pepper",
+        "optional": false
+      },
+      {
+        "item": "rosemary",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "of tomato paste",
+        "amountUS": 3,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "merlot wine",
+        "amountUS": null,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "handfuls spinach",
+        "amountUS": 3,
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "of grated Parmigiano-Reggiano (Parmesan)",
+        "amountUS": null,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "packed parsley",
+        "amountUS": null,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "chopped walnuts",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "flakes to taste optional",
+        "amountUS": null,
+        "measurementUS": "pepper",
+        "optional": false
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cook the pasta to al dante in boiling salted water according to box instructions. Keep 1 cup of the pasta cooking water then drain the pasta."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "In a large skillet, heat the olive and butter over medium-high heat, add the shallots and garlic and cook, tossing regularly for 2 to 3 minutes (manage the heat so that the garlic does not burn)."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add all the mushrooms and toss them around in the pan for a couple of minutes, adding another drizzle of extra virgin olive oil. Season with a good pinch of kosher salt, black pepper and the rosemary. Cook the mushrooms for about 7 to 10 minutes, tossing occasionally, until they turn color and release their juices."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the tomato paste, wine and about ½ to 3/4 cup of the pasta cooking water and the spinach (optional). Cook over medium heat for about 4 to 5 minutes (this becomes your mushroom pasta sauce)."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Separate out sauce for freezing. Let sauce cool, put in a zip lock bag, and place it in the freezer for up to 3 months."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the cooked pasta to the remaining mushroom sauce to enjoy. Toss to combine. If needed add a little bit more of the pasta cooking water."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Stir in Parmesan cheese and finish with a sprinkle of parsley, walnuts and red pepper flakes. Serve immediately!"
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Mushroom Pasta",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#192155ba-6d2c-42e1-880d-8dc9e7ec70a1",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://www.themediterraneandish.com/wprm_print/garlic-mushroom-pasta-recipe",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "butter",
+        "amountUS": 1,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "olive oil",
+        "amountUS": 1,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "onion small diced (or 1 tbsp freeze dried chopped onion)",
+        "amountUS": 1,
+        "measurementUS": "medium",
+        "optional": false
+      },
+      {
+        "item": "ginger grated",
+        "amountUS": 2,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "cloves minced",
+        "amountUS": 3,
+        "measurementUS": "garlic",
+        "optional": false
+      },
+      {
+        "item": "garam masala",
+        "amountUS": 1,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "chili powder",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "mustard seeds",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "coriander",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "curry",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "chicken breast cut into ¾-inch chunks",
+        "amountUS": 2,
+        "measurementUS": "pounds",
+        "optional": false
+      },
+      {
+        "item": "tomato paste",
+        "amountUS": 3,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "red curry paste",
+        "amountUS": 3,
+        "measurementUS": "ounces",
+        "optional": false
+      },
+      {
+        "item": "salt",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "black pepper",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "can coconut milk",
+        "amountUS": 1,
+        "measurementUS": "(14-ounce)",
+        "optional": false
+      },
+      {
+        "item": "naan for serving",
+        "amountUS": 4,
+        "measurementUS": "pieces",
+        "optional": true
+      },
+      {
+        "item": "rice for serving",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": true
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Heat the butter and olive oil in a large skillet over medium-high heat. Cook the onions until they become soft and translucent, about 3-5 minutes. Stir in the ginger and garlic and cook for an additional 1-2 minutes."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Transfer the onion mixture to a bowl, set aside coconut milk and add all other and stir to combine. Add to a zip lock bag if freezing. You can do this up to one day in advance."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "When ready to cook, set the chicken aside and simmer marinade for 2 minutes. "
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the chicken and stir until the chicken is well coated with the onions, tomato and curry pastes, and spices."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Pour the coconut milk over the chicken mixture and stir to combine. Bring the mixture to a boil, and then set the heat to low and simmer uncovered for 20 - 60 minutes. The longer it simmers the more flavor the chicken absorbs."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Buttered Chicken",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#b3b75a05-f8b6-4946-8480-ad4de6a3cfe1",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://feelgoodfoodie.net/recipe/easy-butter-chicken/#wprm-recipe-container-6835",
+    "image": ""
+  },
+  {
+    "ingredients": [
+      {
+        "item": "olive oil",
+        "amountUS": 1,
+        "measurementUS": "tablespoon",
+        "optional": false
+      },
+      {
+        "item": "sweet potatoes",
+        "amountUS": 2,
+        "measurementUS": "large",
+        "optional": false
+      },
+      {
+        "item": "kosher salt, divided",
+        "amountUS": 1,
+        "measurementUS": "teaspoon",
+        "optional": false
+      },
+      {
+        "item": "taco seasoning",
+        "amountUS": 1,
+        "measurementUS": "tbsp",
+        "optional": false
+      },
+      {
+        "item": "can black beans or pinto beans, drained and rinsed",
+        "amountUS": 1,
+        "measurementUS": "(15-oz)",
+        "optional": false
+      },
+      {
+        "item": "cream cheese",
+        "amountUS": 4,
+        "measurementUS": "tablespoons",
+        "optional": false
+      },
+      {
+        "item": "shredded cheder cheese ",
+        "amountUS": 1,
+        "measurementUS": "cup",
+        "optional": false
+      },
+      {
+        "item": "can mild diced green chiles ",
+        "amountUS": 1,
+        "measurementUS": "(4-oz)",
+        "optional": false
+      },
+      {
+        "item": "can red enchilada sauce",
+        "amountUS": 1,
+        "measurementUS": "[5-oz]",
+        "optional": false
+      },
+      {
+        "item": "tortillas gently warmed ",
+        "amountUS": 12,
+        "measurementUS": "corn",
+        "optional": false
+      },
+      {
+        "item": "avocado",
+        "amountUS": 0,
+        "optional": true
+      },
+      {
+        "item": "cilantro",
+        "amountUS": 0,
+        "optional": true
+      },
+      {
+        "item": "salsa",
+        "amountUS": 0,
+        "optional": true
+      },
+      {
+        "item": "sour cream",
+        "amountUS": 0,
+        "measurementUS": "",
+        "optional": true
+      }
+    ],
+    "directions": [
+      {
+        "method": "oven",
+        "methodNote": "",
+        "methodSettings": "stove",
+        "steps": [
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Heat the oven to 350F."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Add the olive oil and a pinch of salt to each sweet potato."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cover a baking sheet with foil and roast the Sweet Potatoes for about 60 minutes, or until very tender. Take out of the oven and let cool."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Peel the skin (which should come off easily once roasted) and lightly mash the cooled sweet potatoes in a bowl."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Meanwhile, begin the filling by adding the black beans, cream cheese, 1/2 cup cheese, green chiles, and 1/4 cup enchilada sauce and taco seasoning in a large bowl. Lightly mash about half of the beans, then stir until all the ingredients are well combined."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Transfer the mashed sweet potatoes to the bowl containing the black bean mixture, scrapping any bits left in the baking dish. Stir until well combined."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "To the same baking dish, pour about a cup enchilada sauce. Dip both sides of each tortilla into the sauce, stacking each dipped tortilla on a plate."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "If the pan is dry after dipping the tortillas, add a bit more enchilada sauce to the bottom of the pan."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Fill each dipped tortilla with about 3 heaping spoonfuls of the black bean and sweet potato filling. Roll tightly, then nestle into the pan."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Top with the remaining enchilada sauce. If freezing, hold off on sprinkling with shredded cheese."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Cover with foil."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "If planning to eat right away, bake for 30 minutes or until bubbling around the edges. Remove the foil and bake for an additional 15 minutes or until the cheese is golden brown."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "If freezing, press foil to eliminate air, then put in a freezer zip lock bag and date. Pull out of freezer and put in fridge 1-2 days before planning to bake. Optionally let rest on counter 1-2 hours before putting in oven. Add cheese right before baking and bake as instructed above."
+          },
+          {
+            "preNote": "",
+            "postNote": "",
+            "step": "Serve with toppings of your choice."
+          }
+        ],
+        "serve": "hot"
+      }
+    ],
+    "name": "Bean and Sweet Potato Enchiladas",
+    "link": "",
+    "freezer": true,
+    "id": "frozenRecipes#8161ba9b-dc40-41ba-bebf-4cc2210ee1e5",
+    "broadCategory": "",
+    "nutritionNeeds": [],
+    "budget": "midBudget",
+    "season": [
+      "fall",
+      "winter"
+    ],
+    "leftOverNotes": "",
+    "notes": "",
+    "comments": [],
+    "neighbors": [],
+    "region": "northwest",
+    "nutrition": {},
+    "source": "https://realfoodwholelife.com/wprm_print/black-bean-and-sweet-potato-enchiladas",
+    "image": ""
+  }
+]

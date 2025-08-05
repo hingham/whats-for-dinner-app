@@ -24,12 +24,12 @@ import { Deselect } from '@mui/icons-material';
 import ArrowForward from '@mui/icons-material/ArrowForward';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { RootState } from '../../Store/rootReducer.ts';
+import { RootState } from '../../Store/rootReducer';
 // import pantryItems from '../../Data/Ingredients/pantryItems.json';
-import { updateIngredientStocked, removeSelectedRecipe } from '../../Store/recipesSlice.ts';
-import { getSelectedRecipes } from '../../Store/reselect.ts';
-import { Recipe, UserRecipe } from '../../Models/recipe.ts';
-import RecipeDialog from '../RecipeDialog/recipeDialog.tsx'; // Import your RecipeDialog component
+import { updateIngredientStocked, removeSelectedRecipe } from '../../Store/recipesSlice';
+import { getSelectedRecipes } from '../../Store/reselect';
+import { Recipe, UserRecipe } from '../../Models/recipe';
+import RecipeDialog from '../RecipeDialog/recipeDialog'; // Import your RecipeDialog component
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GroceryList = Record<string, any>
@@ -272,7 +272,7 @@ export default function ResponsiveGroceryListDrawer() {
           open={openRecipeDialog}
           modalRecipeId={selectedRecipeForDialog.id}
           handleClose={handleCloseRecipeDialog}
-          setModalRecipeId={() => {}}
+          setModalRecipeId={() => { }}
         />
       )}
     </div>
@@ -283,14 +283,10 @@ export default function ResponsiveGroceryListDrawer() {
       <CssBaseline />
       <AppBar
         position="fixed"
-        sx={{
-          width: { lg: `calc(100% - ${drawerWidth}px)` },
-          ml: { md: `${drawerWidth}px` },
-        }}
       >
         <Toolbar sx={{
           display: {
-            lg: 'none', md: 'flex', sm: 'flex', xs: 'flex',
+            lg: 'flex', md: 'flex', sm: 'flex', xs: 'flex',
           },
         }}
         >
@@ -299,7 +295,7 @@ export default function ResponsiveGroceryListDrawer() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { lg: 'none', md: 'block', sm: 'block' } }}
+            sx={{ mr: 2, display: { lg: 'block', md: 'block', sm: 'block' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -310,14 +306,15 @@ export default function ResponsiveGroceryListDrawer() {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           variant="temporary"
           open={mobileOpen}
           onTransitionEnd={handleDrawerTransitionEnd}
           onClose={handleDrawerClose}
           sx={{
-            display: { xs: 'block', sm: 'block', md: 'block' },
+            display: {
+              xs: 'block', sm: 'block', md: 'block', lg: 'block',
+            },
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           slotProps={{
@@ -328,7 +325,7 @@ export default function ResponsiveGroceryListDrawer() {
         >
           {drawer}
         </Drawer>
-        <Drawer
+        {/* <Drawer
           variant="permanent"
           sx={{
             display: {
@@ -339,7 +336,7 @@ export default function ResponsiveGroceryListDrawer() {
           open
         >
           {drawer}
-        </Drawer>
+        </Drawer> */}
       </Box>
       <Box
         component="main"

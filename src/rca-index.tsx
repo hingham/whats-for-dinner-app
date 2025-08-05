@@ -4,10 +4,10 @@ import './index.css';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { Provider } from 'react-redux';
-import App from './App.tsx';
-import reportWebVitals from './reportWebVitals.ts';
-import theme from './theme.ts';
-import store from './Store/store.ts';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import theme from './theme';
+import store from './Store/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,

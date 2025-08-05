@@ -23,8 +23,10 @@
 	}
   },
   "rules": {
-	"react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+	"react/jsx-filename-extension": [2, { "extensions": [".tsx", ".ts"] }],
 	"no-tabs": 1,
- 	// Add custom rules here
+	"import/extensions": [0],
+	"max-len": [2, {"code": 160}]
+	// Add custom rules here
   }
 }

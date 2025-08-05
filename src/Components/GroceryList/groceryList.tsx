@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import CommentIcon from '@mui/icons-material/Comment';
 import { useSelector } from 'react-redux';
-import { RootState } from '../../Store/rootReducer.ts';
+import { RootState } from '../../Store/rootReducer';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GroceryList = Record<string, any>

@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // RecipeRow.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Typography } from '@mui/material';
-import RecipeSlider from '../RecipeSlider/recipeSlider.tsx';
-import { Recipe } from '../../Models/recipe.ts';
+import RecipeSlider from '../RecipeSlider/recipeSlider';
+import { Recipe } from '../../Models/recipe';
 
 interface RecipeRowProps {
   title: string;
@@ -20,15 +20,36 @@ function RecipeRow({
 }: RecipeRowProps): React.ReactElement | null {
   if (!recipes || recipes.length === 0) return null;
 
+  const [slidesToShow, setSlidesToShow] = React.useState(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 900) {
+        setSlidesToShow(3);
+      } else {
+        setSlidesToShow(1);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    // cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <Box
       sx={{
         display: 'flex',
         flexDirection: 'column',
-        // margin: '2em',
         padding: '1em 2em',
-        width: '325px',
-        // textAlign: 'center',
+        maxWidth: {
+          lg: '800px', md: '800px', sm: '325px', xs: '300px',
+        },
       }}
     >
       <Box sx={{
@@ -48,7 +69,7 @@ function RecipeRow({
         </Typography>
         */}
       </Box>
-      <RecipeSlider recipes={recipes} slidesToShow={1} type={type} />
+      <RecipeSlider recipes={recipes} slidesToShow={slidesToShow} type={type} />
     </Box>
   );
 }

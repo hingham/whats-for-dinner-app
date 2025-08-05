@@ -18,11 +18,24 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "types": ["react", "react-dom"],
-    "allowImportingTsExtensions": true
+    "jsx": "preserve",
+    "types": [
+      "react",
+      "react-dom"
+    ],
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+    // "allowImportingTsExtensions": true,
   },
   "include": [
-    "src"
+    "src",
+    "build/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

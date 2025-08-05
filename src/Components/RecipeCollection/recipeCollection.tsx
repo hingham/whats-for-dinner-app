@@ -5,8 +5,8 @@ import { IconButton, Typography } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-import RecipeSlider from '../RecipeSlider/recipeSlider.tsx';
-import { Recipe } from '../../Models/recipe.ts';
+import RecipeSlider from '../RecipeSlider/recipeSlider';
+import { Recipe } from '../../Models/recipe';
 import './recipeCollection.css';
 
 interface RecipeCollectionProps {

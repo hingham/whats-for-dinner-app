@@ -79,3 +79,8 @@ Formats the code according to the project's style guidelines. This ensures that 
 1. restart typescript server / lint server can help address various errors resulting from the server not picking up on recent changes:
 - Cmd+Shift+P to open command palette
 - Search for "restart ___ server" then select
+
+### Existing Bugs:
+- Getting hydration error from nextJs - followed this posts and instructions to install `@mui/material-nextjs` but still seeing error. Posting these docs for further reference later - https://github.com/emotion-js/emotion/issues/3308, https://mui.com/material-ui/integrations/nextjs/#installing-the-dependencies-2
+
+

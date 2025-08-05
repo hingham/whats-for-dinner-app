@@ -7,7 +7,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
-import { Recipe } from '../../Models/recipe.ts';
+import { Recipe } from '../../Models/recipe';
 
 interface RecipeIdeasProp {
   recipes: Recipe[],

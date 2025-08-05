@@ -1,0 +1,32 @@
+.header {
+    text-align: center;
+}
+.recipe-category-container {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 900px) {
+    .recipe-category-container {
+        flex-direction: column;
+    }
+}
+
+.recipe-card-container {
+    width: 246px;
+    margin: 1em;
+}
+
+.recipe-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: white;
+}
+
+.frozen-recipes-container {
+    display: flex;
+    flex-flow: column;
+    align-content: space-between;
+    justify-content: space-between;
+}

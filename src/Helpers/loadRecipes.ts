@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import { Recipe } from '../Models/recipe.ts';
+import { Recipe } from '../Models/recipe';
 
 // Not currently using this function...
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars

@@ -4,9 +4,8 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import Divider from '@mui/material/Divider';
 
-import RecipeSlider from '../RecipeSlider/recipeSlider.tsx';
-import { Recipe } from '../../Models/recipe.ts';
-import RecipeRow from '../RecipeRow/recipeRow.tsx';
+import { Recipe } from '../../Models/recipe';
+import RecipeRow from '../RecipeRow/recipeRow';
 import './meal-plan.css';
 
 const frozenSubTitleString = 'Recipes that can be frozen ready to go. These easy dinners are best thawed in fridge, then baked for 30 - 45 minutes before serving.';
@@ -29,7 +28,6 @@ function MealPlan({
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          // width: '80%',
           flexWrap: 'wrap',
         }}
       // eslint-disable-next-line react/jsx-closing-bracket-location

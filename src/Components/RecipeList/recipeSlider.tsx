@@ -9,9 +9,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // import { v4 as uuidv4 } from 'uuid';
-import BasicRecipeCard from '../RecipeCard/RecipeCard.tsx';
-import { Recipe } from '../../Models/recipe.ts';
-import './recipeList.css';
+import BasicRecipeCard from '../RecipeCard/RecipeCard';
+import { Recipe } from '../../Models/recipe';
 
 interface RecipeListProps {
   recipes: Recipe[];
@@ -21,7 +20,6 @@ interface RecipeListProps {
 
 function RecipeList({ recipes, slidesToShow, startIndex = 0 }: RecipeListProps):
 React.ReactElement {
-  console.log({ slidesToShow });
   return (
     // eslint-disable-next-line indent
     // <Box sx={{
@@ -49,6 +47,7 @@ React.ReactElement {
         <BasicRecipeCard
           key={recipe.id}
           recipe={recipe}
+          recipeId={recipe.id}
         />
       ))}
     </Slider>

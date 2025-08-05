@@ -6,7 +6,7 @@ import {
   MeasurementUS,
   PreparationMethod,
   BudgetCategory,
-} from './enums.ts';
+} from './enums';
 
 type Variation = {
   serveWith: '' // Could point to another recipe, or just a list of ingredients

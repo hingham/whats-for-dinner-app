@@ -11,19 +11,19 @@ import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
-import { Recipe } from '../../Models/recipe.ts';
+import { Recipe } from '../../Models/recipe';
 import {
   addSelectedRecipe, RecipeTypes, removeSelectedRecipe, updateMultiple,
-} from '../../Store/recipesSlice.ts';
-import { RootState } from '../../Store/rootReducer.ts';
+} from '../../Store/recipesSlice';
+import { RootState } from '../../Store/rootReducer';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
-import RecipeIdeas from '../RecipeCard/RecipeIdeas.tsx';
-import { castToNumber } from '../../Helpers/number.ts';
-import NumberInput from '../NumberField/numberField.tsx';
+import RecipeIdeas from '../RecipeCard/RecipeIdeas';
+import { castToNumber } from '../../Helpers/number';
+import NumberInput from '../NumberField/numberField';
 
-import { getCloundinaryUrl } from '../../Helpers/cloudinary.ts';
-import { getRecipeTypeFromId } from '../../Helpers/general.ts';
-import { selectUserRecipe, getBaseRecipe } from '../../Store/reselect.ts';
+import { getCloundinaryUrl } from '../../Helpers/cloudinary';
+import { getRecipeTypeFromId } from '../../Helpers/general';
+import { selectUserRecipe, getBaseRecipe } from '../../Store/reselect';
 // import {fill} from "@cloudinary/url-gen/actions/resize";
 
 interface RecipeModalProps {
@@ -175,7 +175,7 @@ function RecipeDialog({
               </Typography>
               <Box>
                 {ingredients.filter((ingredient) => ingredient.item !== '{base}').map((ingredient) => (
-                  <Typography variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
+                  <Typography key={ingredient.item} variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
                     {castToNumber(ingredient.amountUS) * multiple}
                     {' '}
                     {ingredient.measurementUS}

@@ -1,10 +1,13 @@
 import { createSelector } from 'reselect';
-import { RootState } from './rootReducer.ts'; // Adjust the path to your RootState
-import { getUuidFromId } from '../Helpers/general.ts';
+import { RootState } from './rootReducer'; // Adjust the path to your RootState
+import { getUuidFromId } from '../Helpers/general';
 
 // Input selectors
 export const getSelectedRecipes = (state: RootState) => state.recipes.selected;
-const getFrozenBaseRecipes = (state: RootState) => state.recipes.recipes.frozenBase;
+export const getFrozenBaseRecipes = (state: RootState) => state.recipes.recipes.frozenBase;
+export const getFreshFrozenBaseRecipes = (state: RootState) => state.recipes.recipes.freshRecipes;
+export const getFrozenRecipes = (state: RootState) => state.recipes.recipes.frozenRecipes;
+
 // const selectRecipeId = (_: RootState, id: string) => id;
 // eslint-disable-next-line max-len
 const uuidFromId = (_: RootState, id: string) => (getUuidFromId(id));

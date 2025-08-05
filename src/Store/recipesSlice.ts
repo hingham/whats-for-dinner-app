@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Recipe, Recipes, UserRecipe } from '../Models/recipe.ts';
+import { Recipe, Recipes, UserRecipe } from '../Models/recipe';
 import pantryItems from '../Data/Ingredients/pantryItems.json';
-import { castToNumber } from '../Helpers/number.ts';
+import { castToNumber } from '../Helpers/number';
 
 const pantryItemsParsed = JSON.parse(JSON.stringify(pantryItems));
 export interface RecipeTypes {

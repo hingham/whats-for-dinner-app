@@ -1,5 +1,5 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import recipesReducer from './recipesSlice.ts';
+import recipesReducer from './recipesSlice';
 
 const rootReducer = combineReducers({
   recipes: recipesReducer,

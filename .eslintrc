@@ -26,7 +26,7 @@
 	"react/jsx-filename-extension": [2, { "extensions": [".tsx", ".ts"] }],
 	"no-tabs": 1,
 	"import/extensions": [0],
-	"max-len": [2, {"code": 160}]
+	"max-len": [2, {"code": 200}]
 	// Add custom rules here
   }
 }

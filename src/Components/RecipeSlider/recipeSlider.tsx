@@ -51,7 +51,6 @@ React.ReactElement {
         <BasicRecipeCard
           key={recipe.id}
           recipe={recipe}
-          recipeType={type}
           recipeId={recipe.id}
         />
       ))}

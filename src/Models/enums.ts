@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export type MealCategory = 'keto' | 'vegetarian' | 'vegan'
 
 export type Season = 'summer' | 'fall' | 'winter' | 'spring'

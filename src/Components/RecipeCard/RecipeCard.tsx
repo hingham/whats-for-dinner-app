@@ -23,34 +23,28 @@ import Typography from '@mui/material/Typography';
 import { green } from '@mui/material/colors';
 import AddIcon from '@mui/icons-material/Add';
 import CheckIcon from '@mui/icons-material/Check';
-import Box from '@mui/material/Box';
+import Link from 'next/link';
 import { Recipe, Recipes, UserRecipe } from '../../Models/recipe';
 import { addSelectedRecipe, removeSelectedRecipe, updateMultiple } from '../../Store/recipesSlice';
 import { RootState } from '../../Store/rootReducer';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
-import RecipeIdeas from './RecipeIdeas';
-import { castToNumber } from '../../Helpers/number';
-import NumberInput from '../NumberField/numberField';
-
 import { getCloundinaryUrl, cld } from '../../Helpers/cloudinary';
-import { getRecipeTypeFromId } from '../../Helpers/general';
+import { getUuidFromId } from '../../Helpers/general';
 import { selectUserRecipe } from '../../Store/reselect';
 import RecipeDialog from '../RecipeDialog/recipeDialog';
 // import {fill} from "@cloudinary/url-gen/actions/resize";
 
 interface RecipeReviewCardProps {
-  key: string;
   recipe: Recipe;
   recipeId: string;
 }
 
 export default function RecipeReviewCard({
-  key,
   recipe,
   recipeId,
 }: RecipeReviewCardProps) {
   const {
-    name, ingredients, directions, id, base,
+    name, id,
   } = recipe;
 
   const [open, setOpen] = React.useState(false);
@@ -120,6 +114,11 @@ export default function RecipeReviewCard({
           {isSelected ? <CheckIcon sx={{ color: 'green' }} /> : <AddIcon />}
         </IconButton>
         <Button onClick={handleOpen}>Open</Button>
+        <Link href={`/recipes/${getUuidFromId(id)}`} passHref>
+          <Button size="small">
+            View Details
+          </Button>
+        </Link>
       </CardActions>
       {open ? (
         <RecipeDialog

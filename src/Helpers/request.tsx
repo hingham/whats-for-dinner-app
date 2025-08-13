@@ -30,6 +30,7 @@ const apiRequest = async (endpoint: string, method: string, token?: string, body
     // eslint-disable-next-line no-param-reassign
     token = await getAuthToken();
   }
+  console.log("Attempting to make request to endpoint: ", endpoint);
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${token}`,

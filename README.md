@@ -45,7 +45,7 @@ To install the project dependencies, run:
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -84,3 +84,7 @@ Formats the code according to the project's style guidelines. This ensures that 
 - Getting hydration error from nextJs - followed this posts and instructions to install `@mui/material-nextjs` but still seeing error. Posting these docs for further reference later - https://github.com/emotion-js/emotion/issues/3308, https://mui.com/material-ui/integrations/nextjs/#installing-the-dependencies-2
 
 
+### Understanding Redux with next:
+- Redux recommends create a makeStore function and replacing the Provider with storeProvider. Need to investigate this more as using providers seems to work.
+- Have to use <Link> tag, otherwise redux store will attempt to reset when navigating to another page. This seems problematic... For example a page should be available when a user navigates to it and shouldn't require them to use the link tag to navigate there. Need to provide some loading protection to allow the redux state to hydrate. 
+- Would like the fetch to be completed on the server so the redux state can just be passed the params but need to understand implementing this pattern.

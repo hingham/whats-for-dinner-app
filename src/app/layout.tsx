@@ -1,25 +1,29 @@
 import React from 'react';
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { Header } from '../Components/Header/header';
+// import store from '../Store/store';
+import getStoreInitialData from './storeInitializer';
+import StoreProvider from './storeProvider';
 
-export const metadata: Metadata = {
-  title: 'React App',
-  description: 'Web site created with Next.js.',
-};
-
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const initialRecipes = await getStoreInitialData();
   return (
     <html lang="en">
-      <body>
-        <AppRouterCacheProvider>
-          <div id="root">{children}</div>
-        </AppRouterCacheProvider>
+      <StoreProvider initialRecipes={initialRecipes}>
+        <body>
+          <AppRouterCacheProvider>
+            <Header />
+            {/* The root element for the app */}
+            <div id="root">{children}</div>
+          </AppRouterCacheProvider>
 
-      </body>
+        </body>
+      </StoreProvider>
     </html>
   );
 }

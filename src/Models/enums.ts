@@ -22,3 +22,5 @@ export enum PantryCategoryEnum {
     SpicesSeasonings = 'Spices & Seasonings',
     BreadcrumbsCoating = 'Breadcrumbs & Coating',
 }
+
+export type CollectionType = 'base-freezer-recipes' | 'freezer-recipes' | 'fresh-freezer-base-recipes'

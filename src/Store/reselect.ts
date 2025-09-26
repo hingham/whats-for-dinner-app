@@ -23,3 +23,13 @@ export const getBaseRecipe = createSelector(
   [getFrozenBaseRecipes, uuidFromId],
   (baseRecipes, baseId) => baseRecipes.find((recipe) => getUuidFromId(recipe.id) === baseId),
 );
+
+export const getAllRecipes = createSelector(
+  [getFreshFrozenBaseRecipes, getFrozenRecipes, getFrozenBaseRecipes],
+  (freshFrozen, frozen, base) => [...freshFrozen, ...frozen, ...base],
+);
+
+export const getRecipeById = createSelector(
+  [getAllRecipes, uuidFromId],
+  (recipes, baseId) => recipes.find((recipe) => getUuidFromId(recipe.id) === baseId),
+);

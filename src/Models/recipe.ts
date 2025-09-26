@@ -1,15 +1,14 @@
 import {
   MealCategory,
   Season,
-  Region,
   MeasurementEU,
   MeasurementUS,
-  PreparationMethod,
   BudgetCategory,
 } from './enums';
 
-type Variation = {
-  serveWith: '' // Could point to another recipe, or just a list of ingredients
+export type FormDirectionsType = {
+  directionSetTitle: string;
+  directions: string;
 }
 
 export type Ingredient = {
@@ -27,18 +26,15 @@ export type LocalIngredient = Ingredient & {
   userAmountUS: number,
 };
 
-type Step = {
+export type Step = {
   preNote?: string,
   postNote?: string,
   step: string
 }
 
 export type Directions = {
-  method: PreparationMethod | string,
-  methodSettings: string,
-  methodNote: string,
+  directionSetTitle: string,
   steps: Array<Step>,
-  serve: string,
 }
 
 /*
@@ -49,27 +45,31 @@ Array<ingredients, directions, subrecipe (i.e. topping / filling / other)>
 
 */
 export type Recipe = {
-  variations?: Array<Variation>,
-  link?: string,
-  freezer: boolean,
   name: string,
   id: string,
-  broadCategory: string,
   ingredients: Array<Ingredient>,
   directions: Array<Directions>,
   nutritionNeeds: Array<MealCategory> | Array<string>,
-  budget: BudgetCategory | string,
+  budget: BudgetCategory | string | boolean, // make this a boolean value
   /** Season when the dish is best. No season means dish can be made year round */
   season: Array<Season> | Array<string>,
-  leftOverNotes?: string,
   notes?: string,
-  comments?: Array<string>,
-  neighbors?: Array<string>,
-  region?: Region | string,
-  nutrition?: Record<string, string>,
   source?: string,
   image: string,
-  base?: string,
+  description?: string,
+}
+
+export interface FreezerRecipe extends Recipe {
+  freezer: true,
+  howToFreeze: string,
+  howToThaw: string
+}
+export interface FreshFrozenBaseRecipe extends Recipe {
+  // stores the id of the base recipe to look up
+  freezer: true,
+  base: string, // id that points to the base recipe associated with this recipe
+  howToFreeze: string,
+  howToThaw: string
 }
 
 export type UserRecipe = Omit<Recipe, 'ingredients'> & {
@@ -78,7 +78,7 @@ export type UserRecipe = Omit<Recipe, 'ingredients'> & {
 }
 
 export interface Recipes {
-  frozenRecipes: Recipe[];
-  freshRecipes: Recipe[];
-  frozenBase: Recipe[];
+  frozenRecipes: FreezerRecipe[];
+  freshRecipes: FreshFrozenBaseRecipe[];
+  frozenBase: FreezerRecipe[];
 }

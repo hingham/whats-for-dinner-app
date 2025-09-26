@@ -14,9 +14,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
-import MenuIcon from '@mui/icons-material/Menu';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Checkbox } from '@mui/material';
@@ -297,7 +296,7 @@ export default function ResponsiveGroceryListDrawer() {
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { lg: 'block', md: 'block', sm: 'block' } }}
           >
-            <MenuIcon />
+            <ShoppingCartIcon />
           </IconButton>
         </Toolbar>
       </AppBar>

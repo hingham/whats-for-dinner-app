@@ -7,7 +7,7 @@ import { signInWithPopup, signOut, User } from 'firebase/auth';
 import { auth, googleAuthProvider } from '../../firebase';
 import { putUserRole } from '../../Helpers/userRequest';
 
-function App() {
+function Authorization() {
   const [user, setUser] = React.useState(null as User | null);
 
   const handleSignIn = async () => {
@@ -18,9 +18,16 @@ function App() {
       const requestToken = await auth.currentUser?.getIdToken(true) || '';
       const idTokenResult = await auth.currentUser?.getIdTokenResult();
 
-      if (!idTokenResult?.claims?.role && user) {
-        await putUserRole(user.uid, 'free-tier', requestToken);
+      // If no role is set for the user, assign them a default role
+      if (!idTokenResult?.claims?.role && result.user) {
+        await putUserRole(result.user.uid, 'free-tier', requestToken);
       }
+
+      // Temp code to set admin role for a specific user...
+      if (result.user.uid === 'ukTqsNzw5IZISYeOBDoHc7BrEPa2') {
+        await putUserRole(result.user.uid, 'admin', requestToken);
+      }
+      console.log('User signed in:', result.user, idTokenResult?.claims);
     } catch (error) {
       console.error('Error signing in:', error);
     }
@@ -57,4 +64,4 @@ function App() {
   );
 }
 
-export default App;
+export default Authorization;

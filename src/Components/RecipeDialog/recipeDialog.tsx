@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography';
 import AddIcon from '@mui/icons-material/Add';
 import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
-import { Recipe } from '../../Models/recipe';
+import { FreezerRecipe, FreshFrozenBaseRecipe, Recipe } from '../../Models/recipe';
 import {
   addSelectedRecipe, RecipeTypes, removeSelectedRecipe, updateMultiple,
 } from '../../Store/recipesSlice';
@@ -26,31 +26,25 @@ import { getRecipeTypeFromId } from '../../Helpers/general';
 import { selectUserRecipe, getBaseRecipe } from '../../Store/reselect';
 // import {fill} from "@cloudinary/url-gen/actions/resize";
 
-interface RecipeModalProps {
-  open: boolean;
-  handleClose: () => void;
+interface RecipeDialogContentsProps {
+  handleClose: (() => void);
   modalRecipeId: string;
   // eslint-disable-next-line no-unused-vars
   setModalRecipeId: (id: string) => void;
 }
 
-// Break up the recipe card so the modal is it's own component
-// This will be rendered with modal recipe id
-// When that changes on the "card" then the modal will rerender
-// This function will be responsible for fetching data out of the redux store for data details
-function RecipeDialog({
-  open,
+function RecipeDialogContents({
   handleClose,
   modalRecipeId,
   setModalRecipeId,
-}: RecipeModalProps) {
+}: RecipeDialogContentsProps) {
   const recipeType = getRecipeTypeFromId(modalRecipeId);
 
   const recipe = useSelector((state: RootState) => (
     state.recipes.recipes[recipeType as keyof RecipeTypes] || []
   ).find(
     (rec) => rec.id === modalRecipeId,
-  )) || {} as Recipe;
+  )) || {} as FreezerRecipe | FreshFrozenBaseRecipe | Recipe;
 
   const image = recipe.image ? getCloundinaryUrl(recipe.image) : 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg';
   const {
@@ -64,12 +58,12 @@ function RecipeDialog({
 
   // Question: Should we even show if base is selected -
   // or rather just "link out" to the base recipe?
-  const base = recipe.base || '';
+  // TODO: Change how this is handled so it is more divergent and code isn't running for freezer recipe without
+  const base = (recipe as FreshFrozenBaseRecipe).base || '';
   const baseRecipe = useSelector((state: RootState) => getBaseRecipe(state, base));
   const userBaseRecipe = useSelector((state: RootState) => selectUserRecipe(state, base));
 
   const isBaseSelected = !!userBaseRecipe;
-  console.log({ baseRecipe, userBaseRecipe });
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   const freshFrozenBaseRecipes = useSelector(
@@ -110,13 +104,131 @@ function RecipeDialog({
   };
 
   return (
+    <CardContent sx={{ padding: '0px' }}>
+      <Box>
+        <Box
+          sx={{
+            padding: '.5em',
+            position: 'absolute',
+            backgroundColor: 'rgba(255, 255, 255, 0.75)',
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'row',
+          }}
+        >
+          <IconButton aria-label="select recipe" onClick={handleSelectClick}>
+            {isSelected ? <CheckIcon sx={{ color: 'green', padding: '0px' }} /> : <AddIcon />}
+          </IconButton>
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{
+              padding: '.5em',
+              width: '100%',
+              textAlign: 'center',
+            }}
+          >
+            {name}
+          </Typography>
+          {handleClose ? <Close onClick={handleClose} /> : null}
+
+        </Box>
+        <CardMedia
+          component="img"
+          height="250"
+          image={image} // TODO: Update default image
+          alt="Image of prepared recipe"
+        />
+      </Box>
+      <Box sx={{ margin: '15px' }}>
+        <Box marginBottom="10px">
+          <Typography sx={{ marginBottom: 2 }} variant="body1">
+            Ingredients:
+          </Typography>
+          <Box>
+            {ingredients.filter((ingredient) => ingredient.item !== '{base}').map((ingredient) => (
+              <Typography key={ingredient.item} variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
+                {castToNumber(ingredient.amountUS) * multiple}
+                {' '}
+                {ingredient.measurementUS}
+                {' '}
+                {ingredient.item}
+              </Typography>
+            ))}
+            {baseRecipe && ingredients.filter((ingredient) => ingredient.item === '{base}').map((ingredient) => (
+              <Box sx={{ display: 'flex', flexDirection: 'row' }}>
+                <Typography variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
+                  {ingredient.amountUS}
+                  {' '}
+                  {ingredient.measurementUS}
+                  {' '}
+                  {baseRecipe.name}
+                  {' '}
+                  (Protein Base)
+                </Typography>
+                <IconButton aria-label="select recipe" onClick={handleAddBaseToMealPlan}>
+                  {isBaseSelected ? <CheckIcon sx={{ color: 'green' }} /> : <AddIcon />}
+                </IconButton>
+              </Box>
+            ))}
+          </Box>
+        </Box>
+        <Typography sx={{ marginBottom: 2 }}>Directions:</Typography>
+        {directions.map((direction) => (
+          <Box color="text.secondary" marginBottom="10px">
+            {direction.steps.map((step, i) => {
+              const num = i + 1;
+              return (
+                <Typography key={uuidv4()} variant="body2" color="text.secondary" marginBottom="10px">
+                  {num}
+                  .
+                  {step.preNote}
+                  {' '}
+                  {step.step}
+                  {' '}
+                  {step.postNote}
+                </Typography>
+              );
+            })}
+          </Box>
+        ))}
+        <NumberInput defaultValue={multiple} onChange={handleValueChange} />
+        <RecipeIdeas
+          recipes={recipeIdeas}
+          setModalRecipeId={setModalRecipeId}
+        />
+      </Box>
+    </CardContent>
+  );
+}
+
+interface RecipeDialogProps {
+  handleClose: (() => void);
+  modalRecipeId: string;
+  // eslint-disable-next-line no-unused-vars
+  setModalRecipeId: (id: string) => void;
+  // eslint-disable-next-line react/require-default-props
+  open?: boolean;
+}
+
+// Break up the recipe card so the modal is it's own component
+// This will be rendered with modal recipe id
+// When that changes on the "card" then the modal will rerender
+// This function will be responsible for fetching data out of the redux store for data details
+function RecipeDialog({
+  handleClose,
+  modalRecipeId,
+  setModalRecipeId,
+  open = true,
+}: RecipeDialogProps) {
+  return (
     <Dialog
       // eslint-disable-next-line react/jsx-boolean-value
       fullScreen={true}
-      open={open}
       onClose={handleClose}
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
+      open={open}
     >
       <Box sx={{
         position: 'absolute',
@@ -132,104 +244,20 @@ function RecipeDialog({
         padding: '0px',
       }}
       >
-        <CardContent sx={{ padding: '0px' }}>
-          <Box>
-            <Box
-              sx={{
-                padding: '.5em',
-                position: 'absolute',
-                backgroundColor: 'rgba(255, 255, 255, 0.75)',
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-              }}
-            >
-              <IconButton aria-label="select recipe" onClick={handleSelectClick}>
-                {isSelected ? <CheckIcon sx={{ color: 'green', padding: '0px' }} /> : <AddIcon />}
-              </IconButton>
-              <Typography
-                variant="h5"
-                component="div"
-                sx={{
-                  padding: '.5em',
-                  width: '100%',
-                  textAlign: 'center',
-                }}
-              >
-                {name}
-              </Typography>
-              <Close onClick={handleClose} />
-
-            </Box>
-            <CardMedia
-              component="img"
-              height="250"
-              image={image} // TODO: Update default image
-              alt="Image of prepared recipe"
-            />
-          </Box>
-          <Box sx={{ margin: '15px' }}>
-            <Box marginBottom="10px">
-              <Typography sx={{ marginBottom: 2 }} variant="body1">
-                Ingredients:
-              </Typography>
-              <Box>
-                {ingredients.filter((ingredient) => ingredient.item !== '{base}').map((ingredient) => (
-                  <Typography key={ingredient.item} variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
-                    {castToNumber(ingredient.amountUS) * multiple}
-                    {' '}
-                    {ingredient.measurementUS}
-                    {' '}
-                    {ingredient.item}
-                  </Typography>
-                ))}
-                {baseRecipe && ingredients.filter((ingredient) => ingredient.item === '{base}').map((ingredient) => (
-                  <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                    <Typography variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
-                      {ingredient.amountUS}
-                      {' '}
-                      {ingredient.measurementUS}
-                      {' '}
-                      {baseRecipe.name}
-                      {' '}
-                      (Protein Base)
-                    </Typography>
-                    <IconButton aria-label="select recipe" onClick={handleAddBaseToMealPlan}>
-                      {isBaseSelected ? <CheckIcon sx={{ color: 'green' }} /> : <AddIcon />}
-                    </IconButton>
-                  </Box>
-                ))}
-              </Box>
-            </Box>
-            <Typography sx={{ marginBottom: 2 }}>Directions:</Typography>
-            {directions.map((direction) => (
-              <Box color="text.secondary" marginBottom="10px">
-                {direction.steps.map((step, i) => {
-                  const num = i + 1;
-                  return (
-                    <Typography key={uuidv4()} variant="body2" color="text.secondary" marginBottom="10px">
-                      {num}
-                      .
-                      {step.preNote}
-                      {' '}
-                      {step.step}
-                      {' '}
-                      {step.postNote}
-                    </Typography>
-                  );
-                })}
-              </Box>
-            ))}
-            <NumberInput defaultValue={multiple} onChange={handleValueChange} />
-            <RecipeIdeas
-              recipes={recipeIdeas}
-              setModalRecipeId={setModalRecipeId}
-            />
-          </Box>
-        </CardContent>
+        <RecipeDialogContents
+          handleClose={handleClose}
+          modalRecipeId={modalRecipeId}
+          setModalRecipeId={setModalRecipeId}
+        />
+        {/* <Box sx={{ padding: '1em' }}>
+          <Typography variant="h5" component="div">
+            {name}
+          </Typography>
+        </Box> */}
       </Box>
     </Dialog>
   );
 }
 
 export default RecipeDialog;
+export { RecipeDialogContents };

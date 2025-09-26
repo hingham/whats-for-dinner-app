@@ -52,7 +52,7 @@ export default function RecipeReviewCard({
   const [modalRecipeId, setModalRecipeId] = React.useState(recipeId);
 
   let image = recipe.image ? getCloundinaryUrl(recipe.image) : 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg';
-  let description = recipe.broadCategory;
+  let description = recipe.description || '';
 
   let userRecipe = useSelector((state: RootState) => selectUserRecipe(state, id));
   const [isSelected, setSelected] = React.useState(!!userRecipe);

@@ -1,12 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import rootReducer from './rootReducer';
+import { RecipesState } from './recipesSlice';
 
-export const makeStore = () => {
-  console.log('called make store');
-  return configureStore({
-    reducer: rootReducer,
-  });
-};
+export const makeStore = (preloadedState: RecipesState) => configureStore({
+  reducer: rootReducer,
+  preloadedState: { recipes: preloadedState },
+});
 
 // Infer the type of makeStore
 export type AppStore = ReturnType<typeof makeStore>

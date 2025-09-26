@@ -1,13 +1,17 @@
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import {
+  Box, Typography, Button, Link,
+} from '@mui/material';
 import './header.css';
 
 function Header() {
   return (
     <Box sx={{ paddingTop: '1em' }}>
-      <Typography variant="h2" component="h1" gutterBottom sx={{ textAlign: 'center', margin: '1em .25em .25em .25em' }}>
-        What&apos;s For Dinner?
-      </Typography>
+      <Link href="/" className="header-link">
+        <Typography variant="h2" component="h1" gutterBottom sx={{ textAlign: 'center', margin: '1em .25em .25em .25em' }}>
+          What&apos;s For Dinner?
+        </Typography>
+      </Link>
     </Box>
   );
 }

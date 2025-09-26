@@ -5,7 +5,7 @@ import {
 import { useSelector } from 'react-redux';
 import { RecipeViewButton } from './Components/Header/header';
 // eslint-disable-next-line import/extensions
-import MealPlan from './Components/MealPlan/meal-plan';
+import BrowseRecipes from './Components/MealPlan/meal-plan';
 
 // import RecipeCollection from './Components/RecipeCollection/recipeCollection';
 import ResponsiveGroceryListDrawer from './Components/GroceryList/groceryListDrawer';
@@ -45,15 +45,18 @@ function App() {
       {viewMealPlan
         ? (
           <div className="meal-plan-container">
-            <MealPlan
+            <WeeklyRecipes />
+            <ResponsiveGroceryListDrawer />
+          </div>
+        ) : (
+          <div>
+            <BrowseRecipes
               frozenRecipes={displayedFrozenRecipes}
               frozenBaseRecipes={displayedFrozenBaseRecipes}
               freshRecipes={displayedFreshRecipes}
             />
             <ResponsiveGroceryListDrawer />
           </div>
-        ) : (
-          <WeeklyRecipes />
         )}
     </Container>
   );

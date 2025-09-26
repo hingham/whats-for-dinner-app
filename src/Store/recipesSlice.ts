@@ -1,16 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Recipe, Recipes, UserRecipe } from '../Models/recipe';
+import {
+  FreezerRecipe, FreshFrozenBaseRecipe, Recipe, Recipes, UserRecipe,
+} from '../Models/recipe';
 import pantryItems from '../Data/Ingredients/pantryItems.json';
 import { castToNumber } from '../Helpers/number';
 
 const pantryItemsParsed = JSON.parse(JSON.stringify(pantryItems));
 export interface RecipeTypes {
-  frozenRecipes: Recipe[];
-  freshRecipes: Recipe[];
-  frozenBase: Recipe[];
+  frozenRecipes: FreezerRecipe[];
+  freshRecipes: FreshFrozenBaseRecipe[];
+  frozenBase: FreezerRecipe[];
 }
 
-interface RecipesState {
+export interface RecipesState {
   selected: UserRecipe[];
   recipes: RecipeTypes
 }

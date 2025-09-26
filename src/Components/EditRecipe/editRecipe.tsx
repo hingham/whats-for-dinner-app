@@ -34,7 +34,7 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
     setIngredients(updatedIngredients);
   };
 
-  const handleDirectionChange = (value: string, field: 'method' | 'methodSettings' | 'methodNote' | 'serve', idx: number) => {
+  const handleDirectionChange = (value: string, field: 'directionSetTitle', idx: number) => {
     const updatedDirection = { ...directions[idx] };
     updatedDirection[field] = value;
     const updatedDirections = [...directions];
@@ -114,24 +114,13 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
 
       <h3>Directions</h3>
       {directions.map((direction, index) => (
+        // eslint-disable-next-line react/no-array-index-key
         <Box key={index} sx={{ '& .MuiTextField-root': { m: 1, width: '100%' } }}>
           <TextField
-            value={direction.method || ''}
-            placeholder="Preparation Method"
-            style={{ marginBottom: 4 }}
-            label="Preparation Method"
-            onChange={(e) => handleDirectionChange(e.target.value, 'method', index)}
-          />
-          <TextField
-            value={direction.methodSettings || ''}
-            placeholder="Method Settings"
-            onChange={(e) => handleDirectionChange(e.target.value, 'methodSettings', index)}
-          />
-          <TextField
-            value={direction.methodNote || ''}
-            placeholder="Method Note"
+            value={direction.directionSetTitle || ''}
+            placeholder="Direction Set Title"
             style={{ marginLeft: 8 }}
-            onChange={(e) => handleDirectionChange(e.target.value, 'methodNote', index)}
+            onChange={(e) => handleDirectionChange(e.target.value, 'directionSetTitle', index)}
           />
           {direction.steps.map((step, stepIndex) => (
             // Update the key not to use the index
@@ -162,5 +151,9 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
     </Box>
   );
 }
+
+EditRecipe.defaultProps = {
+  onSave: () => {},
+};
 
 export default EditRecipe;

@@ -4,12 +4,15 @@ import React from 'react';
 // Have to use useParams with client components
 import { useParams } from 'next/navigation';
 import { useSelector } from 'react-redux';
+import { Button } from '@mui/material';
 import { getFreshFrozenBaseRecipes, getRecipeById } from '../../../Store/reselect';
 import { RootState } from '../../../Store/rootReducer';
 import { Recipe } from '../../../Models/recipe';
 import EditRecipe from '../../../Components/EditRecipe/editRecipe';
+import { RecipeDialogContents } from '../../../Components/RecipeDialog/recipeDialog';
 
-export default function ExampleClientComponent() {
+export default function RecipePageView() {
+  const [edit, setEdit] = React.useState(false);
   const params = useParams<{ slug: string }>();
   // const userRecipe = {} as Recipe;
   const recipes = useSelector((state: RootState) => getFreshFrozenBaseRecipes(state));
@@ -22,16 +25,20 @@ export default function ExampleClientComponent() {
     console.log('Recipe saved:', userRecipe.id);
   };
 
+  const editRecipe = () => {
+    setEdit(!edit);
+  };
+
   return (
     <div>
-      <h1>
-        Recipe Slug:
-        {params.slug}
-      </h1>
-      {userRecipe ? <EditRecipe recipe={userRecipe} onSave={onSave} /> : null}
-      {/* <RecipeCard key="temp" recipe={userRecipe} recipeId={params.slug} /> */}
-      {/* Example of using the slug in a component */}
+      {edit
+        ? <EditRecipe recipe={userRecipe} onSave={onSave} />
+        // eslint-disable-next-line react/jsx-boolean-value
+        : <RecipeDialogContents open={true} modalRecipeId={userRecipe.id} setModalRecipeId={() => {}} handleClose={null} />}
 
+      <Button variant="contained" color="primary" onClick={editRecipe}>
+        {edit ? 'View Recipe' : 'Edit Recipe'}
+      </Button>
     </div>
   );
 }

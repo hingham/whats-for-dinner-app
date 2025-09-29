@@ -125,7 +125,7 @@ function Image({ imageFile, setImageFile, setPublicId }: ImageProps): ReactEleme
 
 type ParentRecipeFormProps = {
   children?: React.ReactNode | null;
-  setRecipe: React.Dispatch<React.SetStateAction<Recipe | null>>;
+  setRecipe: React.Dispatch<React.SetStateAction<Omit<Recipe, 'id'> | null>>;
 };
 
 function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): ReactElement {
@@ -136,6 +136,7 @@ function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): React
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [publicId, setPublicId] = useState<string | ''>('');
 
+  // Attempts to transform recipe into recipe that can be saved
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -155,9 +156,11 @@ function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): React
       const publicIdFormatted = publicId.replace(' ', '_');
       if (imageFile) {
         cloundinaryRes = await uploadImageToCloundinary(imageFile, publicIdFormatted);
+        setRecipe({ ...formattedRecipe, image: cloundinaryRes.public_id });
+      } else {
+        setRecipe(formattedRecipe);
       }
-
-      setRecipe({ ...formattedRecipe, image: cloundinaryRes.public_id });
+      alert('Recipe formatted successfully! You can now save it.');
     } catch (err) {
       console.error(err);
       alert('Error saving image.');
@@ -169,7 +172,7 @@ function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): React
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} className="w-full max-w-lg p-4 m-2 border rounded">
       <div className="grid grid-cols-1 gap-4 w-full">
 
         <TextField
@@ -265,11 +268,11 @@ function FreshFreezerBaseRecipeFields({ setExtraRecipeFields }: FreshFreezerBase
 
 function NewRecipeForm(): ReactElement {
   console.log('new form rendered');
-  const [recipe, setRecipe] = useState<Recipe | null>(null);
+  const [recipe, setRecipe] = useState<Omit<Recipe, 'id'> | null>(null);
   const [extraRecipeFields, setExtraRecipeFields] = useState<Record<string, any>>({});
   const [fullFormattedRecipe, setFullFormattedRecipe] = useState<FreezerRecipe | FreshFrozenBaseRecipe | any | null>(null);
   const [collection, setCollection] = useState<CollectionType>('freezer-recipes');
-
+  const [saved, setSaved] = useState(false);
   useEffect(() => {
     setFullFormattedRecipe({
       ...recipe,
@@ -277,9 +280,12 @@ function NewRecipeForm(): ReactElement {
     });
   }, [recipe]);
 
+  // Posts the formatted recipe
   const saveRecipe = async () => {
     try {
       postRecipe(fullFormattedRecipe, collection, '');
+      setSaved(true);
+      alert('Recipe saved successfully!');
     } catch (error) {
       console.error('Error saving recipe:', error);
       alert('Failed to save recipe. Please try again.');
@@ -311,12 +317,16 @@ function NewRecipeForm(): ReactElement {
 
       </ParentRecipeForm>
       {recipe && (
-        <div style={{ marginTop: 32 }}>
-          <h3>Recipe Saved!</h3>
-          <pre>{JSON.stringify(recipe, null, 2)}</pre>
+        <div className="m-2 w-full">
+          <h3>Recipe Formatted!</h3>
+          <pre className="text-wrap p-6">{JSON.stringify(recipe, null, 2)}</pre>
         </div>
       )}
-      <button type="button" onClick={saveRecipe} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Recipe</button>
+      {saved ? (
+        null
+      ) : (
+        <button type="button" onClick={saveRecipe} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Recipe</button>
+      )}
     </div>
   );
 }

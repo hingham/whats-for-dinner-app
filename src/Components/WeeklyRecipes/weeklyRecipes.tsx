@@ -4,7 +4,6 @@ import { getFreshFrozenBaseRecipes, getFrozenRecipes, getFrozenBaseRecipes } fro
 import RecipeCard from '../RecipeCard/RecipeCard';
 import { RootState } from '../../Store/rootReducer';
 import { Recipe } from '../../Models/recipe';
-import './weeklyRecipes.css';
 
 function getRandomItems<T>(arr: T[], count: number): T[] {
   const shuffled = [...arr].sort(() => 0.5 - Math.random());
@@ -23,24 +22,25 @@ function WeeklyRecipes(): React.ReactElement {
 
   return (
     <>
-      <h2 className="header">Your Weekly Recipe Plan</h2>
-      <div className="recipe-container">
-        <div className="frozen-recipes-container">
-          <div>
-            <h3>Frozen Recipe</h3>
-            <div className="recipe-category-container">
+      <hr />
+      <h2 className="text-3xl text-semi-bold my-4 flex justify-center">Your Weekly Recipe Plan</h2>
+      <div className="py-4 grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="col-span-1 justify-self-center md:justify-self-end md:mx-6 w-60">
+          <div className="">
+            <h3 className="text-center text-2xl">Frozen Recipe</h3>
+            <div>
               {selectedFrozen.map((recipe) => (
-                <div className="recipe-card-container" key={recipe.id}>
+                <div className="my-4" key={recipe.id}>
                   <RecipeCard key={recipe.id} recipe={recipe} recipeId={recipe.id} />
                 </div>
               ))}
             </div>
           </div>
           <div>
-            <h3>Frozen Base Recipe</h3>
-            <div className="recipe-category-container">
+            <h3 className="text-center text-2xl">Frozen Base Recipe</h3>
+            <div className="">
               {selectedFrozenBase.map((recipe) => (
-                <div className="recipe-card-container" key={recipe.id}>
+                <div className="my-4" key={recipe.id}>
 
                   <RecipeCard key={recipe.id} recipe={recipe} recipeId={recipe.id} />
                 </div>
@@ -49,11 +49,11 @@ function WeeklyRecipes(): React.ReactElement {
           </div>
 
         </div>
-        <div>
-          <h3>Fresh Frozen Base Recipes</h3>
-          <div className="recipe-category-container">
+        <div className="col-span-1 justify-self-center md:justify-self-start md:mx-6 w-60">
+          <h3 className="text-center text-2xl">Fresh Frozen Base Recipes</h3>
+          <div className="">
             {selectedFreshFrozenBase.map((recipe) => (
-              <div className="recipe-card-container" key={recipe.id}>
+              <div className="justify-self-center my-4" key={recipe.id}>
                 <RecipeCard key={recipe.id} recipe={recipe} recipeId={recipe.id} />
               </div>
             ))}

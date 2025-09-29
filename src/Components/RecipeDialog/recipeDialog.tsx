@@ -61,6 +61,7 @@ function RecipeDialogContents({
   const baseRecipe = useSelector((state: RootState) => getBaseRecipe(state, base));
   const userBaseRecipe = useSelector((state: RootState) => selectUserRecipe(state, base));
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   const isBaseSelected = !!userBaseRecipe;
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
@@ -89,17 +90,17 @@ function RecipeDialogContents({
     dispatch(updateMultiple({ recipeId: id, multiple: numberValue }));
   };
 
-  const handleAddBaseToMealPlan = () => {
-    if (!baseRecipe) {
-      return;
-    }
-    if (isBaseSelected) {
-      dispatch(removeSelectedRecipe(baseRecipe.id));
-    } else {
-      dispatch(addSelectedRecipe({ recipe: baseRecipe, multiple: 1 }));
-      // This doesn't quite work now with the multiple thing...
-    }
-  };
+  // const handleAddBaseToMealPlan = () => {
+  //   if (!baseRecipe) {
+  //     return;
+  //   }
+  //   if (isBaseSelected) {
+  //     dispatch(removeSelectedRecipe(baseRecipe.id));
+  //   } else {
+  //     dispatch(addSelectedRecipe({ recipe: baseRecipe, multiple: 1 }));
+  //     // This doesn't quite work now with the multiple thing...
+  //   }
+  // };
 
   return (
     <div className="grid grid-cols-1 p-6">
@@ -158,9 +159,10 @@ function RecipeDialogContents({
                   {' '}
                   (Protein Base)
                 </div>
-                <IconButton aria-label="select recipe" onClick={handleAddBaseToMealPlan}>
+                { /* Instead of adding here we should just link out and add from the linked out page */}
+                {/* <IconButton aria-label="select recipe" onClick={handleAddBaseToMealPlan}>
                   {isBaseSelected ? <CheckIcon sx={{ color: 'green' }} /> : <AddIcon />}
-                </IconButton>
+                </IconButton> */}
               </div>
             ))}
           </div>

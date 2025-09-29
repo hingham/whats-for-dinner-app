@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import { MeasurementUS } from '../Models/enums';
 import {
   Directions, FormDirectionsType, FreezerRecipe, Ingredient, Step,
@@ -96,16 +95,15 @@ const getFormattedRecipe = (
   howToFreeze: string,
   howToThaw: string,
   budget: boolean,
-): FreezerRecipe => {
+): Omit<FreezerRecipe, 'id'> => {
   const ingredients = getIngredients(ingredientInputs);
   const directions = getDirections(directionsInput);
 
-  const recipe: FreezerRecipe = {
+  const recipe: Omit<FreezerRecipe, 'id'> = {
     ingredients,
     directions,
     name,
     freezer: true,
-    id: uuidv4(),
     nutritionNeeds: [],
     season: ['fall', 'winter'],
     notes: '',

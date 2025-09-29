@@ -21,7 +21,7 @@ type IngredientsProps = {
 
 function Ingredients({ ingredients, setIngredients }: IngredientsProps): ReactElement {
   return (
-    <Box sx={{ '& .MuiTextField-root': { m: 1, width: '100%' } }}>
+    <Box sx={{ '& .MuiTextField-root': { width: '100%' } }}>
       <TextField
         label="ingredients"
         multiline
@@ -40,9 +40,7 @@ type DirectionsProps = {
 };
 
 function DirectionsComponent({ directions, setDirections }: DirectionsProps): ReactElement {
-  console.log(('child directions rerndered'));
   const handleDirectionChange = (index: number, value: string) => {
-    console.log('updating directions', directions);
     const updatedDirections = [...directions];
     updatedDirections[index].directions = value;
     setDirections(updatedDirections);
@@ -62,11 +60,12 @@ function DirectionsComponent({ directions, setDirections }: DirectionsProps): Re
     <div>
       {directions.map((direction, idx) => (
         // eslint-disable-next-line react/no-array-index-key
-        <Box key={idx} sx={{ '& .MuiTextField-root': { m: 1, width: '100%' } }}>
+        <Box key={idx} sx={{ '& .MuiTextField-root': { width: '100%' } }}>
           <TextField
             onChange={(e) => handleDirectionTitleChange(idx, e.target.value)}
             label="direction set title"
             value={direction.directionSetTitle}
+            sx={{ marginBottom: 1 }}
           />
           <TextField
             onChange={(e) => handleDirectionChange(idx, e.target.value)}
@@ -170,22 +169,27 @@ function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): React
   };
 
   return (
-    <form onSubmit={handleFormSubmit} style={{ maxWidth: 600, margin: '0 auto' }}>
-      <TextField
-        label="Recipe Name"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        fullWidth
-        margin="normal"
-      />
-      <Ingredients setIngredients={setIngredients} ingredients={ingredients} />
-      <DirectionsComponent setDirections={setDirections} directions={directions} />
-      <Image setImageFile={setImageFile} imageFile={imageFile} setPublicId={setPublicId} />
-      {children}
-      <Button type="submit" variant="contained" color="primary" style={{ marginTop: 20 }}>
-        Submit Recipe
-      </Button>
+    <form onSubmit={handleFormSubmit}>
+      <div className="grid grid-cols-1 gap-4 w-full">
+
+        <TextField
+          label="Recipe Name"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          fullWidth
+          margin="normal"
+        />
+        <Ingredients setIngredients={setIngredients} ingredients={ingredients} />
+        <DirectionsComponent setDirections={setDirections} directions={directions} />
+        <Image setImageFile={setImageFile} imageFile={imageFile} setPublicId={setPublicId} />
+        {children}
+        <Button type="submit" variant="contained" color="primary" style={{ marginTop: 20 }}>
+          Submit Recipe
+        </Button>
+      </div>
+
     </form>
+
   );
 }
 
@@ -283,7 +287,7 @@ function NewRecipeForm(): ReactElement {
   };
 
   return (
-    <>
+    <div className="margin-auto flex flex-col items-center">
       <FormControl component="fieldset" sx={{ m: 2 }}>
         <FormLabel component="legend">Recipe Type</FormLabel>
         <RadioGroup
@@ -312,8 +316,8 @@ function NewRecipeForm(): ReactElement {
           <pre>{JSON.stringify(recipe, null, 2)}</pre>
         </div>
       )}
-      <Button type="button" onClick={saveRecipe}>Save Recipe</Button>
-    </>
+      <button type="button" onClick={saveRecipe} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Recipe</button>
+    </div>
   );
 }
 

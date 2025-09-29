@@ -260,12 +260,15 @@ export default function ResponsiveGroceryListDrawer() {
         ))}
       </List>
       <Divider />
-      <button
-        type="button"
-        onClick={() => downloadAsTextFile()}
-      >
-        Download as Text
-      </button>
+      <div className="p-6">
+        <button
+          type="button"
+          onClick={() => downloadAsTextFile()}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Download as Text
+        </button>
+      </div>
       {selectedRecipeForDialog && (
         <RecipeDialog
           open={openRecipeDialog}

@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { Provider } from 'react-redux';
 import { makeStore, AppStore } from '../Store/store';
-import { Recipe, UserRecipe } from '../Models/recipe';
+import { FreezerRecipe, FreshFrozenBaseRecipe, UserRecipe } from '../Models/recipe';
 
 export default function StoreProvider({
   children,
@@ -12,9 +12,9 @@ export default function StoreProvider({
   children: React.ReactNode,
   initialRecipes: {
     recipes: {
-      frozenRecipes: Recipe[];
-      freshRecipes: Recipe[];
-      frozenBase: Recipe[];
+      frozenRecipes: FreezerRecipe[];
+      freshRecipes: FreshFrozenBaseRecipe[];
+      frozenBase: FreezerRecipe[];
     };
     selected: UserRecipe[];
   };

@@ -72,24 +72,26 @@ export default function NumberInput(
       min={1}
       max={10}
     >
-      <NumberField.ScrubArea className={styles.ScrubArea}>
-        <label htmlFor={id} className={styles.Label}>
-          Meal Multiplier:
-        </label>
-        <NumberField.ScrubAreaCursor className={styles.ScrubAreaCursor}>
-          <CursorGrowIcon />
-        </NumberField.ScrubAreaCursor>
-      </NumberField.ScrubArea>
+      <div className="flex flex-row items-center">
+        <NumberField.ScrubArea className={styles.ScrubArea}>
+          <label htmlFor={id} className="text-md pr-4">
+            Meal Multiplier
+          </label>
+          <NumberField.ScrubAreaCursor className={styles.ScrubAreaCursor}>
+            <CursorGrowIcon />
+          </NumberField.ScrubAreaCursor>
+        </NumberField.ScrubArea>
 
-      <NumberField.Group className={styles.Group}>
-        <NumberField.Decrement className={styles.Decrement}>
-          <MinusIcon />
-        </NumberField.Decrement>
-        <NumberField.Input className={styles.Input} />
-        <NumberField.Increment className={styles.Increment}>
-          <PlusIcon />
-        </NumberField.Increment>
-      </NumberField.Group>
+        <NumberField.Group className={styles.Group}>
+          <NumberField.Decrement className={styles.Decrement}>
+            <MinusIcon />
+          </NumberField.Decrement>
+          <NumberField.Input className={styles.Input} />
+          <NumberField.Increment className={styles.Increment}>
+            <PlusIcon />
+          </NumberField.Increment>
+        </NumberField.Group>
+      </div>
     </NumberField.Root>
   );
 }

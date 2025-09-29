@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
 import { useCallback, useMemo } from 'react';
 import Dialog from '@mui/material/Dialog';
 import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
 import IconButton from '@mui/material/IconButton';
 import Close from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
@@ -34,7 +32,7 @@ interface RecipeDialogContentsProps {
 }
 
 function RecipeDialogContents({
-  handleClose,
+  handleClose = () => {},
   modalRecipeId,
   setModalRecipeId,
 }: RecipeDialogContentsProps) {
@@ -104,60 +102,54 @@ function RecipeDialogContents({
   };
 
   return (
-    <CardContent sx={{ padding: '0px' }}>
-      <Box>
-        <Box
+    <div className="grid grid-cols-1 p-6">
+      <div
+        className="flex flex-row justify-between items-center border-b border-gray-300"
+      >
+        <IconButton aria-label="select recipe" onClick={handleSelectClick}>
+          {isSelected ? <CheckIcon sx={{ color: 'green', padding: '0px' }} /> : <AddIcon />}
+        </IconButton>
+        <Typography
+          variant="h5"
+          component="div"
           sx={{
             padding: '.5em',
-            position: 'absolute',
-            backgroundColor: 'rgba(255, 255, 255, 0.75)',
             width: '100%',
-            display: 'flex',
-            flexDirection: 'row',
+            textAlign: 'center',
           }}
         >
-          <IconButton aria-label="select recipe" onClick={handleSelectClick}>
-            {isSelected ? <CheckIcon sx={{ color: 'green', padding: '0px' }} /> : <AddIcon />}
-          </IconButton>
-          <Typography
-            variant="h5"
-            component="div"
-            sx={{
-              padding: '.5em',
-              width: '100%',
-              textAlign: 'center',
-            }}
-          >
-            {name}
-          </Typography>
-          {handleClose ? <Close onClick={handleClose} /> : null}
+          {name}
+        </Typography>
+        {handleClose ? <Close onClick={handleClose} /> : null}
 
-        </Box>
+      </div>
+
+      <div className="grid xs:grid-cols-1 sm:grid-cols-2 sm:grid-cols-2 gap-4 border-b border-gray-300 mb-10">
+        {/* image */}
         <CardMedia
+          sx={{ }}
           component="img"
-          height="250"
           image={image} // TODO: Update default image
           alt="Image of prepared recipe"
         />
-      </Box>
-      <Box sx={{ margin: '15px' }}>
-        <Box marginBottom="10px">
+        {/* ingredients */}
+        <div className="p-4">
           <Typography sx={{ marginBottom: 2 }} variant="body1">
             Ingredients:
           </Typography>
-          <Box>
+          <div className="text-sm">
             {ingredients.filter((ingredient) => ingredient.item !== '{base}').map((ingredient) => (
-              <Typography key={ingredient.item} variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
+              <div key={ingredient.item} className="pb-2">
                 {castToNumber(ingredient.amountUS) * multiple}
                 {' '}
                 {ingredient.measurementUS}
                 {' '}
                 {ingredient.item}
-              </Typography>
+              </div>
             ))}
             {baseRecipe && ingredients.filter((ingredient) => ingredient.item === '{base}').map((ingredient) => (
-              <Box sx={{ display: 'flex', flexDirection: 'row' }}>
-                <Typography variant="body2" color="text.secondary" sx={{ padding: '0px' }}>
+              <div key={ingredient.item} className="flex items-center">
+                <div className="font-semibold">
                   {ingredient.amountUS}
                   {' '}
                   {ingredient.measurementUS}
@@ -165,40 +157,48 @@ function RecipeDialogContents({
                   {baseRecipe.name}
                   {' '}
                   (Protein Base)
-                </Typography>
+                </div>
                 <IconButton aria-label="select recipe" onClick={handleAddBaseToMealPlan}>
                   {isBaseSelected ? <CheckIcon sx={{ color: 'green' }} /> : <AddIcon />}
                 </IconButton>
-              </Box>
+              </div>
             ))}
-          </Box>
-        </Box>
+          </div>
+        </div>
+      </div>
+
+      {/* directions */}
+      <div className="p-4 border-b border-gray-300 mb-10">
         <Typography sx={{ marginBottom: 2 }}>Directions:</Typography>
         {directions.map((direction) => (
           <Box color="text.secondary" marginBottom="10px">
             {direction.steps.map((step, i) => {
               const num = i + 1;
               return (
-                <Typography key={uuidv4()} variant="body2" color="text.secondary" marginBottom="10px">
-                  {num}
-                  .
-                  {step.preNote}
-                  {' '}
-                  {step.step}
-                  {' '}
-                  {step.postNote}
-                </Typography>
+                <div className="flex pb-4">
+                  <p className="font-bold pr-2">
+                    {num}
+                    .
+                  </p>
+                  <p>
+                    {step.step}
+                  </p>
+                </div>
               );
             })}
           </Box>
         ))}
+      </div>
+      <div className="p-4">
         <NumberInput defaultValue={multiple} onChange={handleValueChange} />
-        <RecipeIdeas
-          recipes={recipeIdeas}
-          setModalRecipeId={setModalRecipeId}
-        />
-      </Box>
-    </CardContent>
+        {recipeIdeas.length > 0 ? (
+          <RecipeIdeas
+            recipes={recipeIdeas}
+            setModalRecipeId={setModalRecipeId}
+          />
+        ) : null}
+      </div>
+    </div>
   );
 }
 
@@ -230,31 +230,11 @@ function RecipeDialog({
       aria-describedby="modal-modal-description"
       open={open}
     >
-      <Box sx={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '100%',
-        height: '100%',
-        bgcolor: 'background.paper',
-        boxShadow: 24,
-        p: 4,
-        overflow: 'scroll',
-        padding: '0px',
-      }}
-      >
-        <RecipeDialogContents
-          handleClose={handleClose}
-          modalRecipeId={modalRecipeId}
-          setModalRecipeId={setModalRecipeId}
-        />
-        {/* <Box sx={{ padding: '1em' }}>
-          <Typography variant="h5" component="div">
-            {name}
-          </Typography>
-        </Box> */}
-      </Box>
+      <RecipeDialogContents
+        handleClose={handleClose}
+        modalRecipeId={modalRecipeId}
+        setModalRecipeId={setModalRecipeId}
+      />
     </Dialog>
   );
 }

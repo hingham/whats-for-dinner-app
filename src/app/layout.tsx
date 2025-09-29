@@ -5,6 +5,12 @@ import { Header } from '../Components/Header/header';
 // import store from '../Store/store';
 import getStoreInitialData from './storeInitializer';
 import StoreProvider from './storeProvider';
+import './globals.css';
+
+// export const metadata: Metadata = {
+//   title: "What's For Dinner?",
+//   description: "Meal planning app",
+// };
 
 export default async function RootLayout({
   children,
@@ -16,12 +22,13 @@ export default async function RootLayout({
     <html lang="en">
       <StoreProvider initialRecipes={initialRecipes}>
         <body>
-          <AppRouterCacheProvider>
-            <Header />
-            {/* The root element for the app */}
-            <div id="root">{children}</div>
-          </AppRouterCacheProvider>
-
+          <div className="w-full">
+            <AppRouterCacheProvider>
+              <Header />
+              {/* The root element for the app */}
+              <div id="root">{children}</div>
+            </AppRouterCacheProvider>
+          </div>
         </body>
       </StoreProvider>
     </html>

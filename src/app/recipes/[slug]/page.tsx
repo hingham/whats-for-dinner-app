@@ -4,7 +4,6 @@ import React from 'react';
 // Have to use useParams with client components
 import { useParams } from 'next/navigation';
 import { useSelector } from 'react-redux';
-import { Button } from '@mui/material';
 import { getFreshFrozenBaseRecipes, getRecipeById } from '../../../Store/reselect';
 import { RootState } from '../../../Store/rootReducer';
 import { Recipe } from '../../../Models/recipe';
@@ -34,11 +33,12 @@ export default function RecipePageView() {
       {edit
         ? <EditRecipe recipe={userRecipe} onSave={onSave} />
         // eslint-disable-next-line react/jsx-boolean-value
-        : <RecipeDialogContents open={true} modalRecipeId={userRecipe.id} setModalRecipeId={() => {}} handleClose={null} />}
-
-      <Button variant="contained" color="primary" onClick={editRecipe}>
-        {edit ? 'View Recipe' : 'Edit Recipe'}
-      </Button>
+        : <RecipeDialogContents modalRecipeId={userRecipe.id} setModalRecipeId={() => { }} handleClose={() => { }} />}
+      <div className="ml-6 mb-4">
+        <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={editRecipe}>
+          {edit ? 'View Recipe' : 'Edit Recipe'}
+        </button>
+      </div>
     </div>
   );
 }

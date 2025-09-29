@@ -6,7 +6,8 @@ import { uploadImageToCloundinary } from '../../Helpers/cloudinary';
 
 interface EditRecipeProps {
   recipe: Recipe;
-  onSave?: (updatedRecipe: Recipe) => void;
+  // eslint-disable-next-line no-unused-vars
+  onSave?: (_: Recipe) => void;
 }
 
 function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
@@ -74,8 +75,6 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
         image: cloundinaryRes.public_id,
       };
 
-      console.log({ image: recipe.image });
-
       await putRecipe(recipe.id, updatedRecipe, '');
 
       if (onSave) onSave(updatedRecipe);
@@ -87,15 +86,16 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
   };
 
   return (
-    <Box>
-      <h2>Edit Recipe</h2>
-      <label htmlFor="recipe-title">
-        Title:
-        <input id="recipe-title" value={title} onChange={(e) => setTitle(e.target.value)} />
-      </label>
-      <h3>Ingredients</h3>
+    <div className="p-6 grid grid-cols-1 gap-2">
+      <TextField
+        label="Title"
+        value={title || ''}
+        placeholder="Title"
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <h2>Ingredients</h2>
       {ingredients.map((ingredient, idx) => (
-        <Box key={ingredient.item} style={{ display: 'flex', marginBottom: 8 }}>
+        <div key={ingredient.item} className="flex items-center mb-2">
           <TextField value={ingredient.item || ''} onChange={(e) => handleIngredientChange(e.target.value, 'item', idx)} />
           <TextField
             value={ingredient.amountUS || ''}
@@ -105,21 +105,19 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
           <TextField
             value={ingredient.measurementUS || ''}
             placeholder="Measurement"
-            style={{ marginLeft: 8 }}
             onChange={(e) => handleIngredientChange(e.target.value, 'measurementUS', idx)}
           />
-        </Box>
+        </div>
       ))}
-      ;
 
       <h3>Directions</h3>
       {directions.map((direction, index) => (
         // eslint-disable-next-line react/no-array-index-key
-        <Box key={index} sx={{ '& .MuiTextField-root': { m: 1, width: '100%' } }}>
+        <Box key={index} sx={{ '& .MuiTextField-root': { width: '100%' } }}>
           <TextField
             value={direction.directionSetTitle || ''}
             placeholder="Direction Set Title"
-            style={{ marginLeft: 8 }}
+            sx={{ marginBottom: 6 }}
             onChange={(e) => handleDirectionChange(e.target.value, 'directionSetTitle', index)}
           />
           {direction.steps.map((step, stepIndex) => (
@@ -128,7 +126,8 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
             <div key={stepIndex} style={{ marginTop: 4 }}>
               <TextField
                 multiline
-                rows={3}
+                minRows={3}
+                maxRows={10}
                 value={step.step}
                 placeholder={`Step ${stepIndex + 1}`}
                 onChange={(e) => handleStepChange(e.target.value, index, stepIndex)}
@@ -138,22 +137,22 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
         </Box>
       ))}
 
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+      <div className="my-4">
         <h3>Image</h3>
-        <TextField onChange={(e) => setPublicId(e.target.value)} />
+        <TextField onChange={(e) => setPublicId(e.target.value)} placeholder="image title" />
         <input type="file" accept="image/*" onChange={handleImageChange} />
         {imageUrl && <img src={imageUrl} alt="Recipe" style={{ maxWidth: 200, marginTop: 8 }} />}
-      </Box>
-      <br />
-      <button type="button" onClick={handleSave} disabled={saving}>
+      </div>
+      <button type="button" onClick={handleSave} disabled={saving} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         {saving ? 'Saving...' : 'Save'}
       </button>
-    </Box>
+      <hr className="my-4" />
+    </div>
   );
 }
 
 EditRecipe.defaultProps = {
-  onSave: () => {},
+  onSave: () => { },
 };
 
 export default EditRecipe;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, TextField } from '@mui/material';
+import RemoveIcon from '@mui/icons-material/Remove';
+import { Box, IconButton, TextField } from '@mui/material';
 import { Directions, Ingredient, Recipe } from '../../Models/recipe';
 import { putRecipe } from '../../Helpers/recipesRequest';
 import { uploadImageToCloundinary } from '../../Helpers/cloudinary';
@@ -61,19 +62,18 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
   const handleSave = async () => {
     setSaving(true);
     try {
-      let cloundinaryRes;
-      const publicIdFormatted = publicId.replace(' ', '_');
-      if (imageFile) {
-        cloundinaryRes = await uploadImageToCloundinary(imageFile, publicIdFormatted);
-      }
-
       const updatedRecipe: Recipe = {
         ...recipe,
         name: title,
         ingredients,
         directions,
-        image: cloundinaryRes.public_id,
       };
+      let cloundinaryRes;
+      const publicIdFormatted = publicId.replace(' ', '_');
+      if (imageFile) {
+        cloundinaryRes = await uploadImageToCloundinary(imageFile, publicIdFormatted);
+        updatedRecipe.image = cloundinaryRes.public_id;
+      }
 
       await putRecipe(recipe.id, updatedRecipe, '');
 
@@ -84,6 +84,28 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
     }
     setSaving(false);
   };
+
+  function handleRemoveIngredient(idx: number): void {
+    const updatedIngredients = ingredients.filter((_, index) => index !== idx);
+    setIngredients(updatedIngredients);
+  }
+
+  function handleRemoveDirection(index: number): void {
+    const updatedDirections = directions.filter((_, idx) => idx !== index);
+    setDirections(updatedDirections);
+  }
+
+  function handleRemoveDirectionStep(directionIdx: number, stepIdx: number): void {
+    const updatedDirections = directions.map((direction, idx) => {
+      if (idx === directionIdx) {
+        const updatedSteps = direction.steps.filter((_, i) => i !== stepIdx);
+        return { ...direction, steps: updatedSteps };
+      }
+      return direction;
+    });
+
+    setDirections(updatedDirections);
+  }
 
   return (
     <div className="p-6 grid grid-cols-1 gap-2">
@@ -107,6 +129,9 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
             placeholder="Measurement"
             onChange={(e) => handleIngredientChange(e.target.value, 'measurementUS', idx)}
           />
+          <IconButton aria-label="remove ingredient" onClick={() => handleRemoveIngredient(idx)}>
+            <RemoveIcon />
+          </IconButton>
         </div>
       ))}
 
@@ -114,16 +139,22 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
       {directions.map((direction, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <Box key={index} sx={{ '& .MuiTextField-root': { width: '100%' } }}>
-          <TextField
-            value={direction.directionSetTitle || ''}
-            placeholder="Direction Set Title"
-            sx={{ marginBottom: 6 }}
-            onChange={(e) => handleDirectionChange(e.target.value, 'directionSetTitle', index)}
-          />
+          <div className="flex">
+            <TextField
+              value={direction.directionSetTitle || ''}
+              placeholder="Direction Set Title"
+              sx={{ marginBottom: 6 }}
+              onChange={(e) => handleDirectionChange(e.target.value, 'directionSetTitle', index)}
+            />
+            <IconButton aria-label="remove direction" onClick={() => handleRemoveDirection(index)}>
+              <RemoveIcon />
+            </IconButton>
+          </div>
+
           {direction.steps.map((step, stepIndex) => (
             // Update the key not to use the index
             // eslint-disable-next-line react/no-array-index-key
-            <div key={stepIndex} style={{ marginTop: 4 }}>
+            <div key={stepIndex} className="m-4 flex">
               <TextField
                 multiline
                 minRows={3}
@@ -132,8 +163,12 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
                 placeholder={`Step ${stepIndex + 1}`}
                 onChange={(e) => handleStepChange(e.target.value, index, stepIndex)}
               />
+              <IconButton aria-label="remove direction" onClick={() => handleRemoveDirectionStep(index, stepIndex)}>
+                <RemoveIcon />
+              </IconButton>
             </div>
           ))}
+
         </Box>
       ))}
 

@@ -13,7 +13,6 @@ if (!API_DOMAIN) {
 const getAuthToken = async (): Promise<string> => {
   // Example: Replace with Firebase Auth or your auth provider logic.
   const requestToken = await auth.currentUser?.getIdToken(true) || '';
-
   const user = { token: requestToken }; // Replace with actual token retrieval logic.
   return user.token;
 };
@@ -30,7 +29,6 @@ const apiRequest = async (endpoint: string, method: string, token?: string, body
     // eslint-disable-next-line no-param-reassign
     token = await getAuthToken();
   }
-  console.log('Attempting to make request to endpoint: ', endpoint);
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${token}`,

@@ -8,7 +8,7 @@ import { auth, googleAuthProvider } from '../../firebase';
 import { putUserRole } from '../../Helpers/userRequest';
 
 function Authorization() {
-  const [user, setUser] = React.useState(null as User | null);
+  const [user, setUser] = React.useState<User | null>(null);
 
   const handleSignIn = async () => {
     try {

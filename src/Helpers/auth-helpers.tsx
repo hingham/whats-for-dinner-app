@@ -18,5 +18,9 @@ async function getCurrentUserRole(): Promise<string | null | { [key: string]: an
   }
 }
 
+async function getCurrentUser(): Promise<User | null> {
+  return auth.currentUser;
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export { getCurrentUserRole };
+export { getCurrentUserRole, getCurrentUser };

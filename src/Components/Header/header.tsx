@@ -1,7 +1,8 @@
 import React from 'react';
 import {
-  Box, Typography, Button, Link,
+  Box, Typography, Button,
 } from '@mui/material';
+import Link from 'next/link';
 import './header.css';
 
 function Header() {

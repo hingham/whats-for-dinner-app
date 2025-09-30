@@ -11,7 +11,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import Box from '@mui/material/Box';
 import { FreezerRecipe, FreshFrozenBaseRecipe, Recipe } from '../../Models/recipe';
 import {
-  addSelectedRecipe, RecipeTypes, removeSelectedRecipe, updateMultiple,
+  addSelectedRecipe, removeSelectedRecipe, updateMultiple,
 } from '../../Store/recipesSlice';
 import { RootState } from '../../Store/rootReducer';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
@@ -20,8 +20,7 @@ import { castToNumber } from '../../Helpers/number';
 import NumberInput from '../NumberField/numberField';
 
 import { getCloundinaryUrl } from '../../Helpers/cloudinary';
-import { getRecipeTypeFromId } from '../../Helpers/general';
-import { selectUserRecipe, getBaseRecipe } from '../../Store/reselect';
+import { selectUserRecipe, getBaseRecipe, getRecipeById } from '../../Store/reselect';
 // import {fill} from "@cloudinary/url-gen/actions/resize";
 
 interface RecipeDialogContentsProps {
@@ -36,13 +35,14 @@ function RecipeDialogContents({
   modalRecipeId,
   setModalRecipeId,
 }: RecipeDialogContentsProps) {
-  const recipeType = getRecipeTypeFromId(modalRecipeId);
+  // const recipeType = getRecipeTypeFromId(modalRecipeId);
+  // const recipe = useSelector((state: RootState) => (
+  //   state.recipes.recipes[recipeType as keyof RecipeTypes] || []
+  // ).find(
+  //   (rec) => rec.id === modalRecipeId,
+  // )) || {} as FreezerRecipe | FreshFrozenBaseRecipe | Recipe;
 
-  const recipe = useSelector((state: RootState) => (
-    state.recipes.recipes[recipeType as keyof RecipeTypes] || []
-  ).find(
-    (rec) => rec.id === modalRecipeId,
-  )) || {} as FreezerRecipe | FreshFrozenBaseRecipe | Recipe;
+  const recipe = useSelector((state: RootState) => getRecipeById(state, modalRecipeId)) as FreezerRecipe | FreshFrozenBaseRecipe | Recipe;
 
   const image = recipe.image ? getCloundinaryUrl(recipe.image) : 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg';
   const {
@@ -135,7 +135,7 @@ function RecipeDialogContents({
         />
         {/* ingredients */}
         <div className="p-4">
-          <Typography sx={{ marginBottom: 2 }} variant="body1">
+          <Typography sx={{ marginBottom: 2 }}>
             Ingredients:
           </Typography>
           <div className="text-sm">
@@ -173,7 +173,7 @@ function RecipeDialogContents({
       <div className="p-4 border-b border-gray-300 mb-10">
         <Typography sx={{ marginBottom: 2 }}>Directions:</Typography>
         {directions.map((direction) => (
-          <Box color="text.secondary" marginBottom="10px">
+          <Box marginBottom="10px">
             {direction.steps.map((step, i) => {
               const num = i + 1;
               return (

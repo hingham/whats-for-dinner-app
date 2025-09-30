@@ -7,8 +7,6 @@ const googleAuthProvider = new GoogleAuthProvider();
 // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 // has to be prefaced with NEXT_PUBLIC_ to be accessible in the React app
-const key = process.env.NEXT_PUBLIC_API_KEY;
-console.log('API Key:', key, process.env); // For debugging purposes, remove in production
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,

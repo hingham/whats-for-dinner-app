@@ -25,7 +25,7 @@ const getAuthToken = async (): Promise<string> => {
  * @returns Response data or throws an error.
  */
 const apiRequest = async (endpoint: string, method: string, token?: string, body?: unknown) => {
-  if (!token) {
+  if (!token || token === '') {
     // eslint-disable-next-line no-param-reassign
     token = await getAuthToken();
   }
@@ -54,7 +54,7 @@ const apiRequest = async (endpoint: string, method: string, token?: string, body
  * @param endpoint - The API endpoint.
  * @returns Response data.
  */
-const getRequest = (endpoint: string, token: string) => apiRequest(endpoint, 'GET', token);
+export const getRequest = (endpoint: string, token: string) => apiRequest(endpoint, 'GET', token);
 
 /**
  * Helper function for POST requests.
@@ -78,5 +78,3 @@ export const putRequest = (endpoint: string, token: string, body: unknown) => ap
  * @returns Response data.
  */
 export const deleteRequest = (endpoint: string, token: string) => apiRequest(endpoint, 'DELETE', token);
-
-export { getRequest };

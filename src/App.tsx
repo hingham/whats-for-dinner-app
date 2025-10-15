@@ -3,6 +3,7 @@ import {
   Container,
 } from '@mui/material';
 import { useSelector } from 'react-redux';
+import Link from 'next/link';
 import { RecipeViewButton } from './Components/Header/header';
 // eslint-disable-next-line import/extensions
 import BrowseRecipes from './Components/MealPlan/meal-plan';
@@ -44,7 +45,7 @@ function App() {
 
       {viewMealPlan
         ? (
-          <div className="meal-plan-container">
+          <div className="w-full flex flex-col items-center">
             <WeeklyRecipes />
             <ResponsiveGroceryListDrawer />
           </div>
@@ -58,6 +59,7 @@ function App() {
             <ResponsiveGroceryListDrawer />
           </div>
         )}
+      <Link href="/recipes">Create New Recipe</Link>
     </Container>
   );
 }

@@ -24,7 +24,7 @@ const getCloundinaryUrl = (publicId: string, path = '') => {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const uploadImageToCloundinary = async (file: File, publicId?: string): Promise<any> => {
+const uploadImageToCloudinary = async (file: File, publicId?: string): Promise<any> => {
   const formData = new FormData();
   formData.append('file', file);
   formData.append('upload_preset', cloudinaryUploadPreset);
@@ -46,6 +46,6 @@ const uploadImageToCloundinary = async (file: File, publicId?: string): Promise<
   }
 };
 
-export { cld, getCloundinaryUrl, uploadImageToCloundinary };
+export { cld, getCloundinaryUrl, uploadImageToCloudinary };
 // https://res.cloudinary.com/wfd/image/upload/fresh-frozen-base/burrito-bowls-vegan-cashew-sauce.heic
 // https://res.cloudinary.com/wfd/image/upload/burrito-bowls-vegan-cashew-sauce?_a=DAJCyJE+ZAA0

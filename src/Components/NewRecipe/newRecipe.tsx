@@ -5,11 +5,13 @@ import {
   MenuItem,
   Button,
 } from '@mui/material'; import { useSelector } from 'react-redux';
-import { postRecipe } from '../../Helpers/recipesRequest';
+import {
+  postRecipe, postRawRecipe,
+} from '../../Helpers/recipesRequest';
 import {
   FormDirectionsType, FreezerRecipe, FreshFrozenBaseRecipe, Recipe,
 } from '../../Models/recipe';
-import { uploadImageToCloundinary } from '../../Helpers/cloudinary';
+import { uploadImageToCloudinary } from '../../Helpers/cloudinary';
 import getFormattedRecipe from '../../Data/transformer';
 import { CollectionType } from '../../Models/enums';
 import { RootState } from '../../Store/rootReducer';
@@ -129,39 +131,44 @@ type ParentRecipeFormProps = {
 };
 
 function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): ReactElement {
-  console.log('ParentRecipeForm rendered');
   const [title, setTitle] = useState('');
   const [ingredients, setIngredients] = useState('');
   const [directions, setDirections] = useState<FormDirectionsType[]>([{ directions: '', directionSetTitle: '' }]);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [publicId, setPublicId] = useState<string | ''>('');
-
+  const [formatting, setFormatting] = useState(false);
   // Attempts to transform recipe into recipe that can be saved
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setFormatting(true);
+    const recipeText = `${title}\n${ingredients}\n${directions.map((d) => `${d.directionSetTitle}\n${d.directions}`).join('\n\n')}`;
 
-    const formattedRecipe = getFormattedRecipe(
-      title,
-      '',
-      directions, // Update this to support accepting multiple types of directions
-      ingredients,
-      '',
-      '',
-      true,
-    );
+    const formattedRecipe = await postRawRecipe(recipeText);
 
-    console.log({ formattedRecipe });
     try {
-      let cloundinaryRes;
-      const publicIdFormatted = publicId.replace(' ', '_');
+      let cloudinaryRes;
+      const recipe = formattedRecipe
+        ? JSON.parse(formattedRecipe)
+        : getFormattedRecipe(
+          title,
+          '',
+          directions, // Update this to support accepting multiple types of directions
+          ingredients,
+          '',
+          '',
+          true,
+        );
       if (imageFile) {
-        cloundinaryRes = await uploadImageToCloundinary(imageFile, publicIdFormatted);
-        setRecipe({ ...formattedRecipe, image: cloundinaryRes.public_id });
+        const publicIdFormatted = publicId.replace(' ', '_');
+        cloudinaryRes = await uploadImageToCloudinary(imageFile, publicIdFormatted);
+        setRecipe({ ...recipe, image: cloudinaryRes.public_id });
       } else {
-        setRecipe(formattedRecipe);
+        setRecipe({ ...recipe, image: '' });
       }
+      setFormatting(false);
       alert('Recipe formatted successfully! You can now save it.');
     } catch (err) {
+      setFormatting(false);
       console.error(err);
       alert('Error saving image.');
     }
@@ -172,7 +179,7 @@ function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): React
   };
 
   return (
-    <form onSubmit={handleFormSubmit} className="w-full max-w-lg p-4 m-2 border rounded">
+    <form onSubmit={handleFormSubmit} className="w-full p-4 m-2 border rounded">
       <div className="grid grid-cols-1 gap-4 w-full">
 
         <TextField
@@ -186,9 +193,10 @@ function ParentRecipeForm({ children, setRecipe }: ParentRecipeFormProps): React
         <DirectionsComponent setDirections={setDirections} directions={directions} />
         <Image setImageFile={setImageFile} imageFile={imageFile} setPublicId={setPublicId} />
         {children}
-        <Button type="submit" variant="contained" color="primary" style={{ marginTop: 20 }}>
-          Submit Recipe
+        <Button type="submit" variant="contained" color="primary" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-fit" disabled={formatting}>
+          Format Recipe
         </Button>
+        {formatting && <p>Formatting recipe, please wait...</p>}
       </div>
 
     </form>
@@ -206,12 +214,12 @@ function FreezerRecipeFields({ setExtraRecipeFields }: FreezerRecipeFieldsProps)
 
   const handleFreezeMethodChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFreezeMethod(e.target.value);
-    setExtraRecipeFields((prev) => ({ ...prev, freezeMethod: e.target.value }));
+    setExtraRecipeFields((prev) => ({ ...prev, howToFreeze: e.target.value }));
   };
 
   const handleThawMethodChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setThawMethod(e.target.value);
-    setExtraRecipeFields((prev) => ({ ...prev, thawMethod: e.target.value }));
+    setExtraRecipeFields((prev) => ({ ...prev, howToThaw: e.target.value }));
   };
 
   return (
@@ -267,7 +275,6 @@ function FreshFreezerBaseRecipeFields({ setExtraRecipeFields }: FreshFreezerBase
 }
 
 function NewRecipeForm(): ReactElement {
-  console.log('new form rendered');
   const [recipe, setRecipe] = useState<Omit<Recipe, 'id'> | null>(null);
   const [extraRecipeFields, setExtraRecipeFields] = useState<Record<string, any>>({});
   const [fullFormattedRecipe, setFullFormattedRecipe] = useState<FreezerRecipe | FreshFrozenBaseRecipe | any | null>(null);
@@ -279,7 +286,6 @@ function NewRecipeForm(): ReactElement {
       ...extraRecipeFields,
     });
   }, [recipe]);
-
   // Posts the formatted recipe
   const saveRecipe = async () => {
     try {
@@ -293,7 +299,9 @@ function NewRecipeForm(): ReactElement {
   };
 
   return (
-    <div className="margin-auto flex flex-col items-center">
+
+    <div className="margin-auto flex flex-col w-full max-w-4xl my-6 items-center">
+      <h2 className=" text-blue-400 p-4 text-md">New Recipe</h2>
       <FormControl component="fieldset" sx={{ m: 2 }}>
         <FormLabel component="legend">Recipe Type</FormLabel>
         <RadioGroup
@@ -316,16 +324,16 @@ function NewRecipeForm(): ReactElement {
         {/* {collection === 'base-freezer-recipes' && <FreshFrozenBaseRecipe setExtraRecipeFields={setExtraRecipeFields} />} */}
 
       </ParentRecipeForm>
-      {recipe && (
-        <div className="m-2 w-full">
-          <h3>Recipe Formatted!</h3>
-          <pre className="text-wrap p-6">{JSON.stringify(recipe, null, 2)}</pre>
-        </div>
-      )}
-      {saved ? (
-        null
+      {!saved ? (
+        <Button type="button" variant="contained" color="primary" onClick={saveRecipe} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-4 rounded w-full m-20">Save Recipe</Button>
       ) : (
-        <button type="button" onClick={saveRecipe} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Save Recipe</button>
+        null
+      )}
+      {recipe && (
+      <div className="m-2 w-full">
+        <h3>Recipe Formatted!</h3>
+        <pre className="text-wrap p-6">{JSON.stringify(fullFormattedRecipe, null, 2)}</pre>
+      </div>
       )}
     </div>
   );

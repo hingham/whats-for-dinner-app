@@ -18,12 +18,11 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import Close from '@mui/icons-material/Close';
-import Typography from '@mui/material/Typography';
 import { green } from '@mui/material/colors';
 import AddIcon from '@mui/icons-material/Add';
 import CheckIcon from '@mui/icons-material/Check';
 import Link from 'next/link';
+import { Refresh } from '@mui/icons-material';
 import { Recipe, Recipes, UserRecipe } from '../../Models/recipe';
 import { addSelectedRecipe, removeSelectedRecipe, updateMultiple } from '../../Store/recipesSlice';
 import { RootState } from '../../Store/rootReducer';
@@ -37,11 +36,14 @@ import RecipeDialog from '../RecipeDialog/recipeDialog';
 interface RecipeReviewCardProps {
   recipe: Recipe;
   recipeId: string;
+  // eslint-disable-next-line react/require-default-props
+  requestNew?: (() => void) | null;
 }
 
 export default function RecipeReviewCard({
   recipe,
   recipeId,
+  requestNew = null,
 }: RecipeReviewCardProps) {
   const {
     name, id,
@@ -52,7 +54,6 @@ export default function RecipeReviewCard({
   const [modalRecipeId, setModalRecipeId] = React.useState(recipeId);
 
   let image = getCloundinaryUrl(recipe.image || 'fresh-frozen-base/burrito-bowls-vegan-cashew-sauce');
-  let description = recipe.description || '';
   let userRecipe = useSelector((state: RootState) => selectUserRecipe(state, id));
   const [isSelected, setSelected] = React.useState(!!userRecipe);
   React.useEffect(() => {
@@ -94,7 +95,6 @@ export default function RecipeReviewCard({
           </Avatar>
         )}
         title={name}
-        subheader={description}
       />
       <CardMedia
         component="img"
@@ -104,21 +104,18 @@ export default function RecipeReviewCard({
       />
       {/* <AdvancedImage cldImg={image} /> */}
 
-      <CardContent>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {description}
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
+      <CardContent />
+      <CardActions disableSpacing className="flex justify-between">
         <IconButton aria-label="select recipe" onClick={handleSelectClick}>
           {isSelected ? <CheckIcon sx={{ color: 'green' }} /> : <AddIcon />}
         </IconButton>
         <Button onClick={handleOpen}>Open</Button>
         <Link href={`/recipes/${getUuidFromId(id)}`} passHref>
-          <Button size="small">
-            View Details
+          <Button>
+            View
           </Button>
         </Link>
+        {requestNew ? <Refresh onClick={requestNew} /> : null}
       </CardActions>
       {open ? (
         <RecipeDialog

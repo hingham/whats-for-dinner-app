@@ -1,0 +1,6 @@
+{"messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Who wrote 'Romeo and Juliet'?"}, {"role": "assistant", "content": "William Shakespeare wrote 'Romeo and Juliet'."}]}
+{"messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "Who wrote 'Romeo and Juliet'?"}, {"role": "assistant", "content": "William Shakespeare wrote 'Romeo and Juliet'."}]}
+
+// https://platform.openai.com/docs/guides/supervised-fine-tuning
+
+// https://platform.openai.com/docs/guides/migrate-to-responses

@@ -26,3 +26,6 @@ yarn-error.log*
 # next
 .next
 next-env.d.ts
+
+# AI model development
+/src/Data/AIProject

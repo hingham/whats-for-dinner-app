@@ -21,7 +21,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <StoreProvider initialRecipes={initialRecipes}>
-        <body>
+        <body className="body-container">
           <div className="w-full">
             <AppRouterCacheProvider>
               <Header />

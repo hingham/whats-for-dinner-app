@@ -68,8 +68,6 @@ export interface FreshFrozenBaseRecipe extends Recipe {
   // stores the id of the base recipe to look up
   freezer: true,
   base: string, // id that points to the base recipe associated with this recipe
-  howToFreeze: string,
-  howToThaw: string
 }
 
 export type UserRecipe = Omit<Recipe, 'ingredients'> & {

@@ -20,19 +20,23 @@ export default function RecipePageView() {
       const currentUser = await getCurrentUser();
       const userRole = await getCurrentUserRole();
       if (currentUser && userRole === 'admin') {
+        console.log('Admin user detected');
         setIsAdminUser(true);
+      } else {
+        console.log('Non-admin or no user detected');
       }
     })();
   }, []);
 
   const params = useParams<{ slug: string }>();
   // const userRecipe = {} as Recipe;
+
   const userRecipe = useSelector((state: RootState) => getRecipeById(state, params.slug)) as Recipe;
   // Example Route -> /recipes/[slug]
   // Example URL -> /recipes/123
 
   const onSave = () => {
-    console.log('Recipe saved:', userRecipe.id);
+    console.log('Recipe saved:', { userRecipe });
   };
 
   const editRecipe = () => {
@@ -44,11 +48,11 @@ export default function RecipePageView() {
       <div>
         {edit
           ? <EditRecipe recipe={userRecipe} onSave={onSave} />
-        // eslint-disable-next-line react/jsx-boolean-value
-          : <RecipeDialogContents modalRecipeId={userRecipe.id} setModalRecipeId={() => { }} handleClose={() => { }} />}
+          // eslint-disable-next-line react/jsx-boolean-value
+          : <RecipeDialogContents modalRecipeId={userRecipe.id} setModalRecipeId={() => { }} handleClose={null} />}
         <div className="ml-6 mb-4">
           <button type="button" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={editRecipe}>
-            {!edit ? 'View Recipe' : 'Edit Recipe'}
+            {edit ? 'View Recipe' : 'Edit Recipe'}
           </button>
         </div>
       </div>

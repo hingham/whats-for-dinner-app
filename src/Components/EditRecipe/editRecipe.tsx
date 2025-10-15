@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { Box, IconButton, TextField } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import {
+  Box, IconButton, TextField, Button,
+} from '@mui/material';
 import { Directions, Ingredient, Recipe } from '../../Models/recipe';
 import { putRecipe } from '../../Helpers/recipesRequest';
-import { uploadImageToCloundinary } from '../../Helpers/cloudinary';
+import { uploadImageToCloudinary } from '../../Helpers/cloudinary';
 
 interface EditRecipeProps {
   recipe: Recipe;
@@ -71,7 +74,7 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
       let cloundinaryRes;
       const publicIdFormatted = publicId.replace(' ', '_');
       if (imageFile) {
-        cloundinaryRes = await uploadImageToCloundinary(imageFile, publicIdFormatted);
+        cloundinaryRes = await uploadImageToCloudinary(imageFile, publicIdFormatted);
         updatedRecipe.image = cloundinaryRes.public_id;
       }
 
@@ -88,6 +91,15 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
   function handleRemoveIngredient(idx: number): void {
     const updatedIngredients = ingredients.filter((_, index) => index !== idx);
     setIngredients(updatedIngredients);
+  }
+
+  function handleAddIngredient(): void {
+    const newIngredient: Ingredient = {
+      item: '',
+      amountUS: '',
+      measurementUS: '',
+    };
+    setIngredients([...ingredients, newIngredient]);
   }
 
   function handleRemoveDirection(index: number): void {
@@ -117,7 +129,8 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
       />
       <h2>Ingredients</h2>
       {ingredients.map((ingredient, idx) => (
-        <div key={ingredient.item} className="flex items-center mb-2">
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={idx} className="flex items-center mb-2">
           <TextField value={ingredient.item || ''} onChange={(e) => handleIngredientChange(e.target.value, 'item', idx)} />
           <TextField
             value={ingredient.amountUS || ''}
@@ -134,6 +147,17 @@ function EditRecipe({ recipe, onSave }: EditRecipeProps): React.ReactElement {
           </IconButton>
         </div>
       ))}
+
+      <div className="flex justify-start mb-4">
+        <Button
+          variant="outlined"
+          startIcon={<AddIcon />}
+          onClick={() => handleAddIngredient()}
+          className="mt-2"
+        >
+          Add Ingredient
+        </Button>
+      </div>
 
       <h3>Directions</h3>
       {directions.map((direction, index) => (

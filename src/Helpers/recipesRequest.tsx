@@ -25,5 +25,17 @@ const postRecipe = async (recipe: Recipe, collection: CollectionType, token: str
   }
 };
 
+const postRawRecipe = async (rawRecipe: string, token = '') => {
+  try {
+    const response = await postRequest('/raw-recipe', token, { rawRecipe });
+    return response;
+  } catch (error) {
+    console.error('Error posting raw recipe:', error);
+    throw error; // Re-throw the error for further handling if needed
+  }
+};
+
 // eslint-disable-next-line import/prefer-default-export
-export { putRecipe, postRecipe };
+export {
+  putRecipe, postRecipe, postRawRecipe,
+};

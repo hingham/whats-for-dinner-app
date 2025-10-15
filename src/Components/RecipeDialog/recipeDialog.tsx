@@ -21,29 +21,21 @@ import NumberInput from '../NumberField/numberField';
 
 import { getCloundinaryUrl } from '../../Helpers/cloudinary';
 import { selectUserRecipe, getBaseRecipe, getRecipeById } from '../../Store/reselect';
-// import {fill} from "@cloudinary/url-gen/actions/resize";
 
 interface RecipeDialogContentsProps {
-  handleClose: (() => void);
+  handleClose: (() => void) | null;
   modalRecipeId: string;
   // eslint-disable-next-line no-unused-vars
   setModalRecipeId: (id: string) => void;
 }
 
 function RecipeDialogContents({
-  handleClose = () => {},
   modalRecipeId,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   setModalRecipeId,
+  handleClose = null,
 }: RecipeDialogContentsProps) {
-  // const recipeType = getRecipeTypeFromId(modalRecipeId);
-  // const recipe = useSelector((state: RootState) => (
-  //   state.recipes.recipes[recipeType as keyof RecipeTypes] || []
-  // ).find(
-  //   (rec) => rec.id === modalRecipeId,
-  // )) || {} as FreezerRecipe | FreshFrozenBaseRecipe | Recipe;
-
   const recipe = useSelector((state: RootState) => getRecipeById(state, modalRecipeId)) as FreezerRecipe | FreshFrozenBaseRecipe | Recipe;
-
   const image = recipe.image ? getCloundinaryUrl(recipe.image) : 'https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg';
   const {
     id, ingredients, directions, name,
@@ -60,6 +52,7 @@ function RecipeDialogContents({
   const base = (recipe as FreshFrozenBaseRecipe).base || '';
   const baseRecipe = useSelector((state: RootState) => getBaseRecipe(state, base));
   const userBaseRecipe = useSelector((state: RootState) => selectUserRecipe(state, base));
+  console.log({ ingredients, base, baseRecipe });
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   const isBaseSelected = !!userBaseRecipe;
@@ -69,6 +62,7 @@ function RecipeDialogContents({
     (state: RootState) => state.recipes.recipes.freshRecipes,
   );
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   const recipeIdeas = useMemo(() => freshFrozenBaseRecipes.filter(
     (freshRecipe) => freshRecipe.base === recipe.id.split('#')[1],
   ), [recipe]);
@@ -140,7 +134,7 @@ function RecipeDialogContents({
           </Typography>
           <div className="text-sm">
             {ingredients.filter((ingredient) => ingredient.item !== '{base}').map((ingredient) => (
-              <div key={ingredient.item} className="pb-2">
+              <div key={ingredient.item} className={`${ingredient.optional ? 'text-gray-500 italic' : 'text-black'}`}>
                 {castToNumber(ingredient.amountUS) * multiple}
                 {' '}
                 {ingredient.measurementUS}
@@ -173,17 +167,19 @@ function RecipeDialogContents({
       <div className="p-4 border-b border-gray-300 mb-10">
         <Typography sx={{ marginBottom: 2 }}>Directions:</Typography>
         {directions.map((direction) => (
-          <Box marginBottom="10px">
+          <Box marginBottom="10px" key={direction.directionSetTitle}>
             {direction.steps.map((step, i) => {
               const num = i + 1;
+              const stepKey = `${direction.directionSetTitle}-${step.step?.slice(0, 20) || num}`;
               return (
-                <div className="flex pb-4">
+                <div key={stepKey} className="flex pb-4">
                   <p className="font-bold pr-2">
                     {num}
                     .
                   </p>
                   <p>
-                    {step.step}
+                    {step.step?.replace(/{base}/g, baseRecipe ? baseRecipe.name : '(Opps, base recipe not found)') || ''}
+                    {/* {num} */}
                   </p>
                 </div>
               );
@@ -193,12 +189,13 @@ function RecipeDialogContents({
       </div>
       <div className="p-4">
         <NumberInput defaultValue={multiple} onChange={handleValueChange} />
+        {/* TODO: Work on this to make it easier to view ideas
         {recipeIdeas.length > 0 ? (
           <RecipeIdeas
             recipes={recipeIdeas}
             setModalRecipeId={setModalRecipeId}
           />
-        ) : null}
+        ) : null} */}
       </div>
     </div>
   );

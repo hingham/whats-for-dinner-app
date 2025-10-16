@@ -8,7 +8,7 @@ import { auth, googleAuthProvider } from '../../firebase';
 import { putUserRole } from '../../Helpers/userRequest';
 
 function Authorization() {
-  const [user, setUser] = React.useState<User | null>(null);
+  const [user, setUser] = React.useState<User | null>(auth.currentUser || null);
 
   const handleSignIn = async () => {
     try {
@@ -23,10 +23,6 @@ function Authorization() {
         await putUserRole(result.user.uid, 'free-tier', requestToken);
       }
 
-      // Temp code to set admin role for a specific user...
-      if (result.user.uid === 'ukTqsNzw5IZISYeOBDoHc7BrEPa2') {
-        await putUserRole(result.user.uid, 'admin', requestToken);
-      }
       console.log('User signed in:', result.user, idTokenResult?.claims);
     } catch (error) {
       console.error('Error signing in:', error);

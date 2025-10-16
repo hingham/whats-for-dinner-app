@@ -1,5 +1,6 @@
 .body-container {
   background-color: var(--neutral-white);
+  padding: 1em;
 }
 
 .App {

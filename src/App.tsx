@@ -59,7 +59,7 @@ function App() {
             <ResponsiveGroceryListDrawer />
           </div>
         )}
-      <Link href="/recipes">Create New Recipe</Link>
+      <Link className="bg-blue-500 text-white p-2 rounded" href="/recipes">Create New Recipe</Link>
     </Container>
   );
 }

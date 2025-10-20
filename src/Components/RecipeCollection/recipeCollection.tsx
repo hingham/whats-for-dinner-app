@@ -19,7 +19,6 @@ const cardWidth = 400;
 const getRecipesPerRow = () => Math.min(3, Math.floor((window.innerWidth * 0.75) / cardWidth));
 
 function RecipeCollectionRow({ recipes, title, type }: RecipeCollectionProps): React.ReactElement {
-  console.log({ type });
   const [startIndex, setStartIndex] = React.useState(0);
   const [recipesPerRow, setRecipesPerRow] = React.useState(getRecipesPerRow());
 

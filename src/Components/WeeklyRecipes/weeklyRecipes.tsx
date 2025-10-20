@@ -47,8 +47,8 @@ function WeeklyRecipes(): React.ReactElement {
   return (
     <>
       <hr />
-      <h2 className="text-3xl text-semi-bold my-4 flex justify-center">Your Weekly Recipe Plan</h2>
-      <div className="py-4 grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-y-2 gap-x-0 justify-items-center max-w-4xl margin-auto">
+      <h2 className="text-3xl text-semi-bold my-4 flex justify-center">Weekly Recipes</h2>
+      <div className="py-4 grid grid-cols-1 md:grid-cols-3 gap-y-2 gap-x-0 justify-items-center max-w-4xl margin-auto">
         <div className="bg-white p-4 rounded shadow-md md:col-span-1">
           <p className="mb-4">
             Each week, we&apos;ll suggest a selection of recipes to help stock your freezer and plan your meals. You can refresh any recipe you&apos;d like to swap out for a new suggestion.
@@ -60,10 +60,10 @@ function WeeklyRecipes(): React.ReactElement {
             Three servings of one frozen base to use for fresh recipes later in the week or month.
           </p>
           <p className="mb-4">
-            Checking your freezer for freezer bases on hand, and choose three fresh recipes to use them up. We&apos;ll offer suggestions!
+            Check your freezer for freezer bases on hand, and choose three fresh recipes to use them up. We&apos;ll offer suggestions!
           </p>
           <p className="mb-4">
-            Once you have your recipes, click the card to view your grocery list!
+            Once you have your recipes, click the cart to view your grocery list!
           </p>
         </div>
         <div className="w-60 md:col-2">
@@ -88,7 +88,7 @@ function WeeklyRecipes(): React.ReactElement {
           </div>
         </div>
         {/* <div className="col-span-1 justify-self-center md:justify-self-end md:mx-6 w-60" /> */}
-        <h3 className="text-center text-2xl col-span-3">Fresh Recipes (Frozen Base) </h3>
+        <h3 className="text-center text-2xl md:col-span-3">Fresh Recipes (Frozen Base) </h3>
         {selectedFreshFrozenBase.map((recipe, idx) => (
           <div className="my-4 w-60" key={recipe.id}>
             <RecipeCard key={recipe.id} recipe={recipe} recipeId={recipe.id} requestNew={() => { requestNewRecipe('freshFrozenBase', idx); }} />

@@ -9,7 +9,7 @@ import {
   postRecipe, postRawRecipe,
 } from '../../Helpers/recipesRequest';
 import {
-  FormDirectionsType, FreezerRecipe, FreshFrozenBaseRecipe, Recipe,
+  FormDirectionsType, FreezerRecipe, FreshFrozenBaseRecipe,
 } from '../../Models/recipe';
 import { uploadImageToCloudinary } from '../../Helpers/cloudinary';
 import { CollectionType } from '../../Models/enums';

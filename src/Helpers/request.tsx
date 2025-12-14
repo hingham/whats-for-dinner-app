@@ -34,19 +34,26 @@ const apiRequest = async (endpoint: string, method: string, token?: string, body
     Authorization: `Bearer ${token}`,
   };
 
-  const response = await fetch(`${API_DOMAIN}${endpoint}`, {
-    method,
-    headers,
-    body: body ? JSON.stringify(body) : undefined,
-  });
+  try {
+    const response = await fetch(`${API_DOMAIN}${endpoint}`, {
+      method,
+      headers,
+      body: body ? JSON.stringify(body) : undefined,
+    });
 
-  if (response.status >= 400 || response.status < 200) {
-    const error = await response.json();
-    throw new Error(error.message || 'API request failed');
+    if (response.status >= 400 || response.status < 200) {
+      const error = await response.json();
+      throw new Error(error.message || 'API request failed');
+    }
+    const contentType = response.headers.get('content-type');
+    if (contentType && contentType.includes('application/json')) {
+      return response.json();
+    }
+    return {};
+  } catch (error) {
+    console.error('API request error:', error);
+    throw error;
   }
-
-  // I think this is the issue here - need to check that response can be parsed
-  return response.json();
 };
 
 /**
